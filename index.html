@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#1a6b4a">
+  <title>EviHealth - Ejercicios con Evidencia</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- MODE TOGGLE (nocturno) -->
+  <button id="mode-toggle" class="mode-toggle" onclick="FenixFit.toggleNightMode()" aria-label="Modo nocturno">
+    &#x1F319;
+  </button>
+
+  <!-- DISCLAIMER BANNER -->
+  <div id="disclaimer-bar" class="disclaimer-bar">
+    Esta app NO reemplaza la consulta medica. Consulte a su medico antes de iniciar ejercicios.
+    <button onclick="this.parentElement.classList.add('hidden')" aria-label="Cerrar aviso">OK</button>
+  </div>
+
+  <!-- ====== SCREEN: WELCOME ====== -->
+  <section id="screen-welcome" class="screen active">
+    <div class="screen-content">
+      <div class="welcome-icon">&#x1F3CB;&#xFE0F;</div>
+      <h1>EviHealth</h1>
+      <p class="subtitle">Ejercicios con evidencia clinica</p>
+      <div class="evidence-info-banner">
+        <strong>Colores protectores para tus ojos</strong>
+        Fondo crema calido que reduce deslumbramiento
+        [TEXTO-REF: Piepenbrock et al., Ergonomics 2013; Int J HCI 2024].
+        Usa el boton &#x1F319; para modo nocturno.
+      </div>
+      <div class="welcome-features">
+        <div class="feature-item">
+          <span class="feature-icon">&#x1F60A;</span>
+          <span>Adaptado a tu animo</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#x1F9B4;</span>
+          <span>Cuidando tus articulaciones</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#x1F4AA;</span>
+          <span>Mejorando tu postura</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#x2705;</span>
+          <span>Con evidencia clinica verificada</span>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">&#x1F4CA;</span>
+          <span>Seguimiento para estudio clinico</span>
+        </div>
+      </div>
+      <button class="btn-primary" id="btn-welcome-start">
+        Comenzar
+      </button>
+      <div class="disclaimer-box">
+        <strong>Aviso importante:</strong> Esta app es una herramienta de apoyo.
+        NO reemplaza la consulta medica. Si experimenta dolor agudo, mareo o
+        dificultad para respirar, detenga el ejercicio inmediatamente.
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: REGISTRATION ====== -->
+  <section id="screen-register" class="screen">
+    <div class="screen-content">
+      <h2>Crear tu perfil</h2>
+      <p class="hint">Esta informacion nos ayuda a personalizar tus ejercicios</p>
+
+      <div class="form-group">
+        <label class="form-label">Nombre o iniciales</label>
+        <input type="text" id="reg-name" class="form-input" placeholder="Ej: Juan P." maxlength="50">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Edad</label>
+        <input type="number" id="reg-age" class="form-input" placeholder="Ej: 65" min="18" max="120">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Sexo biologico</label>
+        <div class="sex-buttons">
+          <button class="sex-btn" data-sex="male" id="sex-male">
+            <span class="sex-btn-icon">&#x2642;&#xFE0F;</span>
+            Masculino
+          </button>
+          <button class="sex-btn" data-sex="female" id="sex-female">
+            <span class="sex-btn-icon">&#x2640;&#xFE0F;</span>
+            Femenino
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Condicion principal</label>
+        <select id="reg-condition" class="form-select">
+          <option value="">Seleccione...</option>
+          <option value="knee-oa">Dolor de rodilla / Artrosis</option>
+          <option value="kyphosis">Cifosis / Joroba</option>
+          <option value="both">Ambas (rodilla + postura)</option>
+          <option value="general">Salud general / Prevencion</option>
+          <option value="other">Otra</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Nivel de actividad actual</label>
+        <select id="reg-activity" class="form-select">
+          <option value="">Seleccione...</option>
+          <option value="sedentary">Sedentario (poco o ningun ejercicio)</option>
+          <option value="light">Ligero (camina ocasionalmente)</option>
+          <option value="moderate">Moderado (ejercicio 1-2 veces/semana)</option>
+          <option value="active">Activo (ejercicio 3+ veces/semana)</option>
+        </select>
+      </div>
+
+      <div class="consent-box">
+        <strong>Consentimiento informado</strong><br><br>
+        Al usar esta aplicacion, usted acepta que:<br>
+        - Sus datos se almacenan localmente en su dispositivo.<br>
+        - La informacion es anonima y se usa para mejorar las recomendaciones.<br>
+        - Puede exportar sus datos en cualquier momento.<br>
+        - Esta app NO reemplaza la consulta medica profesional.<br>
+        - Puede dejar de participar en cualquier momento sin consecuencias.<br>
+        - Los ejercicios estan basados en guias clinicas oficiales (ACR, OARSI, AAOS, EULAR, WHO).<br><br>
+        <em>Estudio piloto: Efectividad de una app de ejercicios adaptativos en adultos mayores.</em>
+      </div>
+      <label class="consent-check">
+        <input type="checkbox" id="reg-consent">
+        <span>He leido y acepto participar voluntariamente</span>
+      </label>
+
+      <button class="btn-primary" id="btn-register" disabled>
+        Crear perfil y comenzar
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: CHECK-IN MOOD ====== -->
+  <section id="screen-checkin-mood" class="screen">
+    <div class="screen-content">
+      <div class="progress-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <h2>Como te sientes hoy?</h2>
+      <p class="hint">Selecciona tu estado de animo</p>
+      <div id="mood-buttons" class="mood-grid">
+        <button class="mood-btn" data-mood="1" aria-label="Muy mal">
+          <span class="mood-emoji">&#x1F61E;</span>
+          <span class="mood-label">Muy mal</span>
+        </button>
+        <button class="mood-btn" data-mood="2" aria-label="Mal">
+          <span class="mood-emoji">&#x1F615;</span>
+          <span class="mood-label">Mal</span>
+        </button>
+        <button class="mood-btn" data-mood="3" aria-label="Regular">
+          <span class="mood-emoji">&#x1F610;</span>
+          <span class="mood-label">Regular</span>
+        </button>
+        <button class="mood-btn" data-mood="4" aria-label="Bien">
+          <span class="mood-emoji">&#x1F642;</span>
+          <span class="mood-label">Bien</span>
+        </button>
+        <button class="mood-btn" data-mood="5" aria-label="Muy bien">
+          <span class="mood-emoji">&#x1F604;</span>
+          <span class="mood-label">Muy bien</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: CHECK-IN PAIN ====== -->
+  <section id="screen-checkin-pain" class="screen">
+    <div class="screen-content">
+      <div class="progress-dots">
+        <span class="dot completed"></span>
+        <span class="dot active"></span>
+        <span class="dot"></span>
+      </div>
+      <h2>Cuanto dolor sientes?</h2>
+      <p class="hint">Desliza para indicar tu nivel de dolor</p>
+
+      <div class="pain-display">
+        <span id="pain-value" class="pain-number">0</span>
+        <span class="pain-max">/ 10</span>
+      </div>
+      <div class="pain-labels-row">
+        <span>Sin dolor</span>
+        <span>Dolor maximo</span>
+      </div>
+      <input type="range" id="pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
+
+      <h3 class="pain-location-title">Donde te duele mas?</h3>
+      <div id="pain-location" class="pain-location-grid">
+        <button class="location-btn" data-location="knee-left">
+          <span class="location-icon">&#x1F9B5;</span>
+          Rodilla izq.
+        </button>
+        <button class="location-btn selected" data-location="knee-right">
+          <span class="location-icon">&#x1F9B5;</span>
+          Rodilla der.
+        </button>
+        <button class="location-btn" data-location="both-knees">
+          <span class="location-icon">&#x1F9B5;&#x1F9B5;</span>
+          Ambas rodillas
+        </button>
+        <button class="location-btn" data-location="upper-back">
+          <span class="location-icon">&#x1F9B4;</span>
+          Espalda alta
+        </button>
+      </div>
+
+      <button class="btn-primary" id="btn-generate-routine">
+        Ver mi rutina de hoy
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: ROUTINE ====== -->
+  <section id="screen-routine" class="screen">
+    <div class="screen-content">
+      <div class="progress-dots">
+        <span class="dot completed"></span>
+        <span class="dot completed"></span>
+        <span class="dot active"></span>
+      </div>
+
+      <div id="routine-header" class="routine-header">
+        <!-- Filled by JS -->
+      </div>
+
+      <div id="routine-list" class="routine-list">
+        <!-- Filled by JS -->
+      </div>
+
+      <button class="btn-primary" id="btn-start-routine">
+        Empezar rutina
+      </button>
+      <button class="btn-secondary" onclick="FenixFit.showScreen('screen-checkin-mood')">
+        Cambiar respuestas
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: EXERCISE PLAYER ====== -->
+  <section id="screen-exercise" class="screen">
+    <div class="screen-content">
+      <div id="exercise-progress" class="exercise-progress">
+        <!-- "Ejercicio 2 de 8" -->
+      </div>
+
+      <h2 id="exercise-name" class="exercise-title"></h2>
+
+      <div id="exercise-video" class="video-container">
+        <!-- YouTube iframe -->
+      </div>
+
+      <div id="exercise-evidence" class="evidence-badge-container">
+        <!-- Evidence badge -->
+      </div>
+
+      <div id="exercise-info" class="exercise-info">
+        <div id="exercise-reps" class="exercise-reps"></div>
+        <div id="exercise-equipment" class="exercise-equipment"></div>
+      </div>
+
+      <div id="exercise-instructions" class="exercise-instructions">
+        <!-- Step by step -->
+      </div>
+
+      <div class="exercise-nav">
+        <button class="btn-secondary" id="btn-skip">Saltar</button>
+        <button class="btn-primary" id="btn-next">Siguiente</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: COMPLETED ====== -->
+  <section id="screen-completed" class="screen">
+    <div class="screen-content center-content">
+      <div class="celebration-icon">&#x1F389;</div>
+      <h2>Felicidades!</h2>
+      <p id="completion-message" class="completion-msg"></p>
+
+      <div id="streak-display" class="streak-box">
+        <span class="streak-flame">&#x1F525;</span>
+        <span id="streak-count" class="streak-number">0</span>
+        <span class="streak-label">dias seguidos</span>
+      </div>
+
+      <h3>Dolor despues del ejercicio?</h3>
+      <div class="pain-display" style="margin:8px 0 4px;">
+        <span id="post-pain-value" class="pain-number pain-low" style="font-size:48px;">0</span>
+        <span class="pain-max">/ 10</span>
+      </div>
+      <input type="range" id="post-pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
+
+      <h3>Como te sientes ahora?</h3>
+      <div id="post-mood-buttons" class="mood-grid small">
+        <button class="mood-btn" data-postmood="1"><span class="mood-emoji">&#x1F61E;</span></button>
+        <button class="mood-btn" data-postmood="2"><span class="mood-emoji">&#x1F615;</span></button>
+        <button class="mood-btn" data-postmood="3"><span class="mood-emoji">&#x1F610;</span></button>
+        <button class="mood-btn" data-postmood="4"><span class="mood-emoji">&#x1F642;</span></button>
+        <button class="mood-btn" data-postmood="5"><span class="mood-emoji">&#x1F604;</span></button>
+      </div>
+
+      <button class="btn-primary" onclick="FenixFit.showScreen('screen-progress')">
+        Ver mi progreso
+      </button>
+      <button class="btn-secondary" onclick="FenixFit.showScreen('screen-welcome')">
+        Volver al inicio
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: PROGRESS ====== -->
+  <section id="screen-progress" class="screen">
+    <div class="screen-content">
+      <h2>Mi Progreso</h2>
+
+      <div id="progress-stats" class="progress-stats">
+        <!-- Stats cards -->
+      </div>
+
+      <h3>Ultimos 7 dias</h3>
+      <div id="progress-chart" class="progress-chart">
+        <!-- SVG chart -->
+      </div>
+
+      <div id="progress-history" class="progress-history">
+        <!-- Recent sessions -->
+      </div>
+
+      <button class="btn-primary" onclick="FenixFit.showScreen('screen-checkin-mood')">
+        Hacer check-in de hoy
+      </button>
+      <button class="btn-secondary" onclick="FenixFit.showScreen('screen-welcome')">
+        Volver al inicio
+      </button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN: TRACKING (Outcomes) ====== -->
+  <section id="screen-tracking" class="screen">
+    <div class="screen-content">
+      <h2>Seguimiento Clinico</h2>
+      <div id="user-profile-badge" class="user-badge"></div>
+
+      <div class="evidence-info-banner">
+        <strong>Mediciones validadas internacionalmente</strong>
+        Usamos escalas recomendadas por OARSI y OMS para medir tu progreso
+        de forma que los datos sean utiles para investigacion clinica.
+      </div>
+
+      <div class="tracking-section">
+        <div class="tracking-card">
+          <div class="tracking-title">Dolor (Escala VAS 0-10)</div>
+          <p class="hint">Como ha cambiado tu dolor esta semana?</p>
+          <div class="pain-display">
+            <span id="tracking-pain-value" class="pain-number pain-low">0</span>
+            <span class="pain-max">/ 10</span>
+          </div>
+          <input type="range" id="tracking-pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
+          <div class="vas-scale">
+            <span>Sin dolor</span>
+            <span>Dolor maximo</span>
+          </div>
+        </div>
+
+        <div class="tracking-card">
+          <div class="tracking-title">Prueba Sentarse-Levantarse (30 seg)</div>
+          <p class="hint">Cuantas veces puede sentarse y levantarse de una silla en 30 segundos?</p>
+          <input type="number" id="tracking-chairstand" class="form-input" placeholder="Ej: 8" min="0" max="50">
+          <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
+            Promedio normal 60-64 anos: 12-17 | 65-69: 11-16 | 70-74: 10-15 | 75-79: 10-14 | 80+: 8-13
+            <br>[GUIA-OFICIAL: Rikli & Jones, J Aging Phys Act 1999; CDC Senior Fitness Test]
+          </p>
+        </div>
+
+        <div class="tracking-card">
+          <div class="tracking-title">Distancia Occipucio-Pared (cm)</div>
+          <p class="hint">De pie contra la pared, cuantos cm hay entre su cabeza y la pared?</p>
+          <input type="number" id="tracking-owd" class="form-input" placeholder="Ej: 3.5" min="0" max="30" step="0.5">
+          <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
+            Normal: 0-4 cm | Cifosis: >4 cm
+            <br>[TEXTO-REF: Correlacion con angulo Cobb r=0.72, Arch Osteoporos 2018]
+          </p>
+        </div>
+
+        <div class="tracking-card">
+          <div class="tracking-title">Capacidad funcional (autoevaluacion)</div>
+          <p class="hint">Del 1 al 5, como califica su capacidad para actividades diarias?</p>
+          <div class="mood-grid">
+            <button class="mood-btn func-btn" data-func="1"><span class="mood-emoji">1</span><span class="mood-label">Muy dificil</span></button>
+            <button class="mood-btn func-btn" data-func="2"><span class="mood-emoji">2</span><span class="mood-label">Dificil</span></button>
+            <button class="mood-btn func-btn" data-func="3"><span class="mood-emoji">3</span><span class="mood-label">Regular</span></button>
+            <button class="mood-btn func-btn" data-func="4"><span class="mood-emoji">4</span><span class="mood-label">Bien</span></button>
+            <button class="mood-btn func-btn" data-func="5"><span class="mood-emoji">5</span><span class="mood-label">Excelente</span></button>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btn-save-tracking">
+        Guardar medicion semanal
+      </button>
+
+      <h3 style="margin-top:24px;">Evolucion</h3>
+      <div id="tracking-evolution" class="progress-chart">
+        <!-- SVG evolution chart -->
+      </div>
+
+      <div id="tracking-outcomes" class="tracking-section">
+        <!-- Outcomes summary -->
+      </div>
+
+      <button class="export-btn" id="btn-export-data">
+        &#x1F4E5; Exportar datos (CSV)
+      </button>
+      <p style="font-size:14px;color:var(--color-text-light);text-align:center;margin-top:8px;">
+        Exporta tus datos anonimizados para uso en investigacion clinica
+      </p>
+    </div>
+  </section>
+
+  <!-- ====== EVIDENCE MODAL ====== -->
+  <div id="evidence-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" onclick="FenixFit.closeModal()">&times;</button>
+      <h3 id="modal-title">Evidencia Clinica</h3>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- NAV BAR -->
+  <nav class="bottom-nav">
+    <button class="nav-btn" onclick="FenixFit.showScreen('screen-welcome')" aria-label="Inicio">
+      <span class="nav-icon">&#x1F3E0;</span>
+      <span class="nav-label">Inicio</span>
+    </button>
+    <button class="nav-btn" onclick="FenixFit.showScreen('screen-checkin-mood')" aria-label="Ejercicio">
+      <span class="nav-icon">&#x1F3CB;&#xFE0F;</span>
+      <span class="nav-label">Ejercicio</span>
+    </button>
+    <button class="nav-btn" onclick="FenixFit.showScreen('screen-progress')" aria-label="Progreso">
+      <span class="nav-icon">&#x1F4CA;</span>
+      <span class="nav-label">Progreso</span>
+    </button>
+    <button class="nav-btn" onclick="FenixFit.showScreen('screen-tracking')" aria-label="Seguimiento">
+      <span class="nav-icon">&#x1F9EA;</span>
+      <span class="nav-label">Estudio</span>
+    </button>
+  </nav>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

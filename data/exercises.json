@@ -1,0 +1,1127 @@
+[
+  {
+    "id": "knee-quad-set-001",
+    "name": "Cuadriceps isometrico sentado",
+    "nameEn": "Seated Quad Sets",
+    "category": "knee-strengthening",
+    "bodyPart": "quadriceps",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 repeticiones x 5 segundos cada una",
+    "instructions": [
+      "Sientese en una silla firme con la espalda recta.",
+      "Extienda una pierna al frente, manteniendola recta.",
+      "Apriete el musculo del muslo (cuadriceps) con fuerza durante 5 segundos.",
+      "Relaje lentamente. Repita 10 veces por pierna."
+    ],
+    "contraindications": ["Dolor agudo de rodilla durante la contraccion"],
+    "painThreshold": 7,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "IF5eDfb8afM",
+      "source": "Baptist Health"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["AAOS Knee Conditioning Program 2023", "ACR/AF Guidelines 2021"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "isometric", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "knee-slr-002",
+    "name": "Elevacion de pierna recta",
+    "nameEn": "Straight Leg Raises",
+    "category": "knee-strengthening",
+    "bodyPart": "quadriceps",
+    "equipment": "colchoneta",
+    "position": "supine",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones por pierna, 5 segundos arriba",
+    "instructions": [
+      "Acuestese boca arriba con una pierna doblada y la otra recta.",
+      "Apriete el cuadriceps de la pierna recta.",
+      "Levante la pierna recta hasta la altura de la rodilla doblada.",
+      "Mantenga 5 segundos arriba. Baje lentamente.",
+      "Repita 10 veces. Cambie de pierna."
+    ],
+    "contraindications": ["Dolor lumbar agudo", "Hernia de disco activa"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "U4L_6JEv9Jg",
+      "source": "Baptist Health"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["AAOS Knee Conditioning Program 2023", "OARSI 2019 Guidelines"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "strengthening", "beginner", "floor-exercise"]
+  },
+  {
+    "id": "knee-hamcurl-003",
+    "name": "Curl de isquiotibiales de pie",
+    "nameEn": "Standing Hamstring Curls",
+    "category": "knee-strengthening",
+    "bodyPart": "hamstrings",
+    "equipment": "silla para apoyo",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones por pierna",
+    "instructions": [
+      "De pie, sujetese del respaldo de una silla para equilibrio.",
+      "Doble una rodilla llevando el talon hacia el gluteo.",
+      "Mantenga 3 segundos arriba.",
+      "Baje lentamente. Repita 10 veces por pierna."
+    ],
+    "contraindications": ["Dolor agudo detras de la rodilla"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "oWu8RxtWdGE",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["ACR/AF 2021", "OARSI 2019"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "strengthening", "beginner", "standing"]
+  },
+  {
+    "id": "knee-calfraise-004",
+    "name": "Elevacion de talones",
+    "nameEn": "Calf Raises",
+    "category": "knee-strengthening",
+    "bodyPart": "calves",
+    "equipment": "silla para apoyo",
+    "position": "standing",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "15 repeticiones, 2 series",
+    "instructions": [
+      "De pie, sujetese del respaldo de una silla.",
+      "Levante ambos talones del suelo poniendose de puntillas.",
+      "Mantenga 2 segundos arriba.",
+      "Baje lentamente. Repita 15 veces."
+    ],
+    "contraindications": ["Dolor agudo en la pantorrilla", "Trombosis venosa profunda"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "BxfKOyI8sUg",
+      "source": "Hinge Health"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["AAOS Knee Conditioning Program 2023"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "strengthening", "beginner", "standing"]
+  },
+  {
+    "id": "knee-wallsit-005",
+    "name": "Sentadilla en pared",
+    "nameEn": "Wall Sits",
+    "category": "knee-strengthening",
+    "bodyPart": "quadriceps",
+    "equipment": "pared",
+    "position": "standing",
+    "difficulty": 3,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 15-20 segundos",
+    "instructions": [
+      "Apoye la espalda contra la pared, pies a un paso de distancia.",
+      "Deslice hacia abajo hasta que las rodillas esten a 45 grados (NO a 90).",
+      "Mantenga la posicion 15-20 segundos.",
+      "Suba lentamente. Descanse 10 seg. Repita 3 veces."
+    ],
+    "contraindications": ["Dolor de rodilla mayor a 4/10 durante el ejercicio", "Inflamacion activa severa"],
+    "painThreshold": 4,
+    "moodMinimum": 3,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "hAvVXAE9Bgs",
+      "source": "Cornerstone Physiotherapy"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["OARSI 2019", "ACR/AF 2021"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "isometric", "intermediate", "standing"]
+  },
+  {
+    "id": "knee-stepup-006",
+    "name": "Subida al escalon",
+    "nameEn": "Step-Ups",
+    "category": "knee-strengthening",
+    "bodyPart": "quadriceps",
+    "equipment": "escalon bajo (10-15 cm)",
+    "position": "standing",
+    "difficulty": 3,
+    "durationSeconds": 120,
+    "reps": "10 repeticiones por pierna",
+    "instructions": [
+      "Coloquese frente a un escalon bajo (10-15 cm). Sujete una baranda si es necesario.",
+      "Suba con la pierna afectada, apoyando todo el pie.",
+      "Suba la otra pierna. Baje con la pierna sana primero.",
+      "Repita 10 veces. Descanse. Haga otra serie si puede."
+    ],
+    "contraindications": ["Dolor de rodilla mayor a 5/10", "Inestabilidad de rodilla", "Problemas de equilibrio severos"],
+    "painThreshold": 4,
+    "moodMinimum": 3,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "wfhXnLILqdk",
+      "source": "Cornerstone Physiotherapy"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["OARSI 2019", "EULAR 2018"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "functional", "intermediate", "standing"]
+  },
+  {
+    "id": "knee-extension-007",
+    "name": "Extension de rodilla sentado",
+    "nameEn": "Seated Knee Extension",
+    "category": "knee-strengthening",
+    "bodyPart": "quadriceps",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones por pierna, 5 seg arriba",
+    "instructions": [
+      "Sientese con la espalda recta en una silla firme.",
+      "Extienda una pierna lentamente hasta que quede recta.",
+      "Mantenga 5 segundos apretando el cuadriceps.",
+      "Baje lentamente. Repita 10 veces por pierna."
+    ],
+    "contraindications": ["Dolor agudo al extender la rodilla"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "VuJZ6dqMf8M",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["AAOS Knee Conditioning Program 2023", "ACR/AF 2021"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "strengthening", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "knee-minisquat-008",
+    "name": "Mini sentadilla con apoyo",
+    "nameEn": "Mini Squats with Support",
+    "category": "knee-strengthening",
+    "bodyPart": "quadriceps",
+    "equipment": "silla para apoyo",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones, 2 series",
+    "instructions": [
+      "De pie detras de una silla, sujetese del respaldo.",
+      "Baje lentamente doblando las rodillas solo 30-45 grados.",
+      "Mantenga las rodillas alineadas con los dedos del pie.",
+      "Suba lentamente. Repita 10 veces."
+    ],
+    "contraindications": ["Dolor de rodilla mayor a 5/10 durante el movimiento"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "V1Hq_UvA9Uk",
+      "source": "Husky Orthopaedics"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["ACR/AF 2021", "OARSI 2019"],
+      "level": "strong"
+    },
+    "tags": ["knee-oa", "strengthening", "beginner", "standing"]
+  },
+  {
+    "id": "kyphosis-chintuck-001",
+    "name": "Retraccion de menton",
+    "nameEn": "Chin Tucks",
+    "category": "kyphosis-correction",
+    "bodyPart": "cervical-spine",
+    "equipment": "ninguno",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 repeticiones, 5 segundos cada una",
+    "instructions": [
+      "Sientese o parece con la espalda recta.",
+      "Lleve el menton hacia atras como si hiciera una 'papada'.",
+      "Imagine que alguien empuja suavemente su frente hacia atras.",
+      "Mantenga 5 segundos. Relaje. Repita 10 veces."
+    ],
+    "contraindications": ["Dolor cervical agudo", "Mareo al mover el cuello"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "KqR1EoEmq9c",
+      "source": "Rehab and Revive"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC3997126 - Exercise for Age-Related Hyperkyphotic Posture (Systematic Review)"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "posture", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "kyphosis-wallangel-002",
+    "name": "Angeles en la pared",
+    "nameEn": "Wall Angels",
+    "category": "kyphosis-correction",
+    "bodyPart": "thoracic-spine",
+    "equipment": "pared",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones lentas",
+    "instructions": [
+      "Apoye espalda, cabeza y gluteos contra la pared.",
+      "Levante los brazos en posicion de 'W' contra la pared.",
+      "Deslice los brazos hacia arriba formando una 'Y'.",
+      "Baje lentamente. Repita 10 veces de forma lenta y controlada."
+    ],
+    "contraindications": ["Dolor de hombro agudo", "Limitacion severa de movilidad de hombro"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "Y2fJafVLT4E",
+      "source": "HealthAF"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC3997126 - Systematic Review on Hyperkyphosis Exercises", "PMC5873977 - SHEAF RCT"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "posture", "beginner", "standing"]
+  },
+  {
+    "id": "kyphosis-catcow-003",
+    "name": "Gato-Vaca",
+    "nameEn": "Cat-Cow Stretch",
+    "category": "kyphosis-correction",
+    "bodyPart": "thoracic-spine",
+    "equipment": "colchoneta",
+    "position": "quadruped",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 ciclos lentos",
+    "instructions": [
+      "Coloquese en cuatro puntos (manos y rodillas).",
+      "GATO: Redondee la espalda hacia arriba, meta el menton al pecho.",
+      "VACA: Arquee la espalda hacia abajo, mire hacia arriba.",
+      "Alterne lentamente entre gato y vaca. 10 ciclos."
+    ],
+    "contraindications": ["Dolor de munecas severo", "Dolor lumbar agudo al arquearse"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "1Y0YjXS9sKI",
+      "source": "Hinge Health"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC3997126 - Systematic Review on Hyperkyphosis"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "mobility", "beginner", "floor-exercise"]
+  },
+  {
+    "id": "kyphosis-thorext-004",
+    "name": "Extension toracica en silla",
+    "nameEn": "Thoracic Extension Over Chair",
+    "category": "kyphosis-correction",
+    "bodyPart": "thoracic-spine",
+    "equipment": "silla con respaldo",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 repeticiones, 3 segundos cada una",
+    "instructions": [
+      "Sientese en una silla con respaldo firme.",
+      "Coloque las manos detras de la cabeza.",
+      "Arquee la espalda superior sobre el respaldo de la silla.",
+      "Mantenga 3 segundos. Vuelva al centro. Repita 10 veces."
+    ],
+    "contraindications": ["Osteoporosis severa de columna", "Dolor agudo al extender"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "woHZZa12zDw",
+      "source": "Rehab My Patient"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC5873977 - SHEAF RCT on Spine Strengthening", "PMC3997126"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "extension", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "kyphosis-doorway-005",
+    "name": "Estiramiento pectoral en puerta",
+    "nameEn": "Doorway Chest Stretch",
+    "category": "kyphosis-correction",
+    "bodyPart": "chest",
+    "equipment": "marco de puerta",
+    "position": "standing",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 20 segundos",
+    "instructions": [
+      "Parese en el marco de una puerta.",
+      "Coloque los antebrazos en ambos lados del marco, codos a 90 grados.",
+      "De un paso adelante hasta sentir estiramiento en el pecho.",
+      "Mantenga 20 segundos. Relaje. Repita 3 veces."
+    ],
+    "contraindications": ["Dolor de hombro agudo", "Inestabilidad de hombro"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "B9uY01NoqBg",
+      "source": "Baptist Health"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC3997126 - Anterior trunk stretching for kyphosis"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "stretching", "beginner", "standing"]
+  },
+  {
+    "id": "kyphosis-ytw-006",
+    "name": "Y-T-W boca abajo",
+    "nameEn": "Prone Y-T-W Raises",
+    "category": "kyphosis-correction",
+    "bodyPart": "upper-back",
+    "equipment": "colchoneta",
+    "position": "prone",
+    "difficulty": 3,
+    "durationSeconds": 120,
+    "reps": "5 repeticiones de cada letra",
+    "instructions": [
+      "Acuestese boca abajo con la frente sobre una toalla.",
+      "Y: Levante ambos brazos formando una Y. Mantenga 3 seg.",
+      "T: Brazos a los lados formando una T. Mantenga 3 seg.",
+      "W: Codos doblados formando una W. Apriete omoplatos 3 seg.",
+      "Repita 5 veces cada posicion."
+    ],
+    "contraindications": ["Dolor de hombro severo", "Dolor lumbar al estar boca abajo"],
+    "painThreshold": 4,
+    "moodMinimum": 3,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "aFtzZl4ySMo",
+      "source": "[P]rehab"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC5873977 - SHEAF RCT", "PMC3997126"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "strengthening", "intermediate", "floor-exercise"]
+  },
+  {
+    "id": "kyphosis-scapular-007",
+    "name": "Apriete de omoplatos sentado",
+    "nameEn": "Seated Scapular Squeeze",
+    "category": "kyphosis-correction",
+    "bodyPart": "upper-back",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 repeticiones, 5 segundos cada una",
+    "instructions": [
+      "Sientese con la espalda recta, brazos a los lados.",
+      "Apriete los omoplatos uno hacia el otro como si sujetara un lapiz entre ellos.",
+      "Mantenga 5 segundos apretando.",
+      "Relaje. Repita 10 veces."
+    ],
+    "contraindications": ["Dolor agudo entre los omoplatos"],
+    "painThreshold": 7,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "hJffqKmfnfA",
+      "source": "Canadian Chiropractic Guideline Initiative"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC3997126 - Systematic Review on Hyperkyphosis"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "isometric", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "kyphosis-superman-008",
+    "name": "Superman modificado",
+    "nameEn": "Modified Superman",
+    "category": "kyphosis-correction",
+    "bodyPart": "lower-back",
+    "equipment": "colchoneta",
+    "position": "prone",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "8 repeticiones, 3 segundos cada una",
+    "instructions": [
+      "Acuestese boca abajo con los brazos extendidos al frente.",
+      "Levante un brazo y la pierna opuesta del suelo a la vez.",
+      "Mantenga 3 segundos.",
+      "Baje. Alterne lados. Repita 8 veces por lado."
+    ],
+    "contraindications": ["Dolor lumbar agudo", "Estenosis espinal"],
+    "painThreshold": 4,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "J9zXkxUAfUA",
+      "source": "Children's Hospital Colorado"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Rehabilitacion de extensores espinales - consenso clinico"],
+      "level": "moderate"
+    },
+    "tags": ["kyphosis", "strengthening", "beginner", "floor-exercise"]
+  },
+  {
+    "id": "chair-marching-001",
+    "name": "Marcha sentado",
+    "nameEn": "Seated Marching",
+    "category": "chair-exercises",
+    "bodyPart": "hip-flexors",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "20 pasos (10 por pierna)",
+    "instructions": [
+      "Sientese al borde de una silla firme, espalda recta.",
+      "Levante una rodilla hacia el pecho como si marchara.",
+      "Baje lentamente. Alterne piernas.",
+      "Marche 20 pasos a ritmo constante."
+    ],
+    "contraindications": [],
+    "painThreshold": 8,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "xxf93bq9-vA",
+      "source": "Institute of Sports and Spines"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC10094373 - Chair Exercise for OA", "Harvard Health Chair Exercises 2024"],
+      "level": "moderate"
+    },
+    "tags": ["chair-exercise", "cardio", "beginner", "pain-friendly", "warmup"]
+  },
+  {
+    "id": "chair-sitstand-002",
+    "name": "Sentarse y levantarse de silla",
+    "nameEn": "Chair Sit-to-Stand",
+    "category": "chair-exercises",
+    "bodyPart": "quadriceps",
+    "equipment": "silla firme",
+    "position": "seated",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "8-10 repeticiones",
+    "instructions": [
+      "Sientese en una silla firme, pies apoyados en el suelo.",
+      "Inclinese ligeramente hacia adelante.",
+      "Levantese usando la fuerza de las piernas (use las manos si necesita).",
+      "Sientese lentamente controlando el descenso. Repita 8-10 veces."
+    ],
+    "contraindications": ["Mareo al levantarse", "Dolor de rodilla mayor a 6/10"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "ITv-_BkcrD0",
+      "source": "Baptist Health"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["AAOS Knee Conditioning Program 2023", "OARSI 2019 - Functional training"],
+      "level": "strong"
+    },
+    "tags": ["chair-exercise", "functional", "beginner", "knee-oa"]
+  },
+  {
+    "id": "chair-hipflex-003",
+    "name": "Flexion de cadera sentado",
+    "nameEn": "Seated Hip Flexion",
+    "category": "chair-exercises",
+    "bodyPart": "hip-flexors",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 repeticiones por pierna",
+    "instructions": [
+      "Sientese con la espalda recta.",
+      "Levante una rodilla hacia el pecho lo mas que pueda sin dolor.",
+      "Mantenga 3 segundos.",
+      "Baje lentamente. Repita 10 veces por pierna."
+    ],
+    "contraindications": [],
+    "painThreshold": 8,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "ROwj2dNcL6c",
+      "source": "More Life Health Seniors"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC10094373 - Chair Exercise Functional Fitness", "Harvard Health 2024"],
+      "level": "moderate"
+    },
+    "tags": ["chair-exercise", "beginner", "pain-friendly", "hip"]
+  },
+  {
+    "id": "chair-heelraise-004",
+    "name": "Elevacion de talones con apoyo",
+    "nameEn": "Chair-Supported Heel Raises",
+    "category": "chair-exercises",
+    "bodyPart": "calves",
+    "equipment": "silla para apoyo",
+    "position": "standing",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "15 repeticiones",
+    "instructions": [
+      "De pie, sujetese del respaldo de una silla.",
+      "Levante ambos talones poniendose de puntillas.",
+      "Mantenga 2 segundos.",
+      "Baje lentamente. Repita 15 veces."
+    ],
+    "contraindications": [],
+    "painThreshold": 7,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "L73id3cxjXI",
+      "source": "Ossum Wellness"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["AAOS Knee Conditioning Program 2023"],
+      "level": "strong"
+    },
+    "tags": ["chair-exercise", "strengthening", "beginner", "pain-friendly"]
+  },
+  {
+    "id": "chair-torso-005",
+    "name": "Rotacion de tronco sentado",
+    "nameEn": "Seated Torso Rotation",
+    "category": "chair-exercises",
+    "bodyPart": "core",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 rotaciones por lado",
+    "instructions": [
+      "Sientese con la espalda recta, manos en el pecho o caderas.",
+      "Gire el tronco lentamente hacia la derecha.",
+      "Mantenga 3 segundos.",
+      "Vuelva al centro. Gire a la izquierda. Repita 10 veces por lado."
+    ],
+    "contraindications": ["Dolor lumbar agudo al girar"],
+    "painThreshold": 7,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "Entxk49n-Gs",
+      "source": "Iron City Elite Fitness"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Movilidad espinal - consenso rehabilitacion geriatrica"],
+      "level": "established"
+    },
+    "tags": ["chair-exercise", "mobility", "beginner", "pain-friendly"]
+  },
+  {
+    "id": "chair-ankle-006",
+    "name": "Bombeo de tobillos",
+    "nameEn": "Ankle Pumps",
+    "category": "chair-exercises",
+    "bodyPart": "ankles",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "20 repeticiones por pie",
+    "instructions": [
+      "Sientese con los pies ligeramente elevados del suelo.",
+      "Mueva el pie hacia arriba (dorsiflexion) y luego hacia abajo (plantiflexion).",
+      "Haga circulos con el tobillo en ambas direcciones.",
+      "Repita 20 veces por pie."
+    ],
+    "contraindications": [],
+    "painThreshold": 10,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "KxfFzSOAT7g",
+      "source": "Michigan Medicine"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Prevencion de TVP y movilidad articular - consenso clinico"],
+      "level": "established"
+    },
+    "tags": ["chair-exercise", "mobility", "beginner", "pain-friendly", "warmup"]
+  },
+  {
+    "id": "balance-heeltoe-001",
+    "name": "Caminata talon-punta",
+    "nameEn": "Heel-to-Toe Walk",
+    "category": "balance-mobility",
+    "bodyPart": "full-body",
+    "equipment": "pared o pasillo para apoyo",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 60,
+    "reps": "10 pasos, 2-3 recorridos",
+    "instructions": [
+      "Parese junto a una pared para apoyo si lo necesita.",
+      "Coloque el talon de un pie justo delante de los dedos del otro pie.",
+      "Camine 10 pasos en linea recta, talon-punta.",
+      "Gire con cuidado y regrese. Repita 2-3 veces."
+    ],
+    "contraindications": ["Vertigo activo", "Riesgo alto de caidas sin supervision"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "z_GKdFf3qv4",
+      "source": "National Institute on Aging"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["NIA Go4Life Program", "EULAR 2018 - Balance training for OA"],
+      "level": "strong"
+    },
+    "tags": ["balance", "functional", "beginner", "standing"]
+  },
+  {
+    "id": "balance-singleleg-002",
+    "name": "Parado en una pierna con apoyo",
+    "nameEn": "Single Leg Stand with Support",
+    "category": "balance-mobility",
+    "bodyPart": "full-body",
+    "equipment": "silla o pared",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 10-15 seg por pierna",
+    "instructions": [
+      "Parese junto a una silla o pared, sujetandose con una mano.",
+      "Levante una pierna del suelo doblando la rodilla.",
+      "Mantenga el equilibrio 10-15 segundos.",
+      "Baje. Repita 3 veces por pierna. Intente soltar la mano si puede."
+    ],
+    "contraindications": ["Vertigo severo", "Riesgo alto de caidas"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "QT5d4tTXW6U",
+      "source": "National Institute on Aging"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["NIA Go4Life Program", "EULAR 2018 - Fall prevention"],
+      "level": "strong"
+    },
+    "tags": ["balance", "functional", "beginner", "standing"]
+  },
+  {
+    "id": "balance-sidelegraise-003",
+    "name": "Elevacion lateral de pierna",
+    "nameEn": "Side Leg Raises",
+    "category": "balance-mobility",
+    "bodyPart": "hip-abductors",
+    "equipment": "silla para apoyo",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones por pierna",
+    "instructions": [
+      "De pie, sujetese del respaldo de una silla.",
+      "Levante una pierna hacia el lado, manteniendola recta.",
+      "No incline el tronco. Mantenga 2 segundos.",
+      "Baje lentamente. Repita 10 veces por pierna."
+    ],
+    "contraindications": ["Dolor de cadera agudo"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "buKh-KlenY8",
+      "source": "Caregiver Stress"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["NIA Go4Life Program", "OARSI 2019"],
+      "level": "strong"
+    },
+    "tags": ["balance", "strengthening", "beginner", "standing"]
+  },
+  {
+    "id": "balance-tandem-004",
+    "name": "Posicion tandem",
+    "nameEn": "Tandem Stance",
+    "category": "balance-mobility",
+    "bodyPart": "full-body",
+    "equipment": "pared para apoyo",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 15-20 seg por lado",
+    "instructions": [
+      "Parese junto a una pared para apoyo.",
+      "Coloque un pie directamente delante del otro, talon tocando punta.",
+      "Mantenga la posicion 15-20 segundos.",
+      "Cambie el pie de adelante. Repita 3 veces por lado."
+    ],
+    "contraindications": ["Vertigo activo"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "ra7tzlPxnsQ",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "GUIA-OFICIAL",
+      "sources": ["NIA Go4Life Program - Balance exercises"],
+      "level": "strong"
+    },
+    "tags": ["balance", "functional", "beginner", "standing"]
+  },
+  {
+    "id": "warmup-marchstanding-001",
+    "name": "Marcha en el lugar",
+    "nameEn": "Marching in Place",
+    "category": "warmup-cooldown",
+    "bodyPart": "full-body",
+    "equipment": "ninguno",
+    "position": "standing",
+    "difficulty": 1,
+    "durationSeconds": 120,
+    "reps": "2 minutos a ritmo comodo",
+    "instructions": [
+      "Parese con los pies separados al ancho de hombros.",
+      "Marche en el lugar levantando las rodillas a una altura comoda.",
+      "Mueva los brazos naturalmente al caminar.",
+      "Continue 2 minutos a un ritmo que le permita conversar."
+    ],
+    "contraindications": [],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "xxf93bq9-vA",
+      "source": "Institute of Sports and Spines"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Fisiologia del ejercicio - calentamiento cardiovascular"],
+      "level": "established"
+    },
+    "tags": ["warmup", "cardio", "beginner", "standing"]
+  },
+  {
+    "id": "warmup-shoulderroll-002",
+    "name": "Circulos de hombros",
+    "nameEn": "Shoulder Rolls",
+    "category": "warmup-cooldown",
+    "bodyPart": "shoulders",
+    "equipment": "ninguno",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 30,
+    "reps": "10 circulos hacia adelante, 10 hacia atras",
+    "instructions": [
+      "Sientese o parece con los brazos relajados a los lados.",
+      "Haga circulos con los hombros hacia adelante, 10 veces.",
+      "Luego circulos hacia atras, 10 veces.",
+      "Haga los circulos amplios y lentos."
+    ],
+    "contraindications": [],
+    "painThreshold": 8,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "ouRhQE2iOI8",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Movilidad articular - calentamiento estandar"],
+      "level": "established"
+    },
+    "tags": ["warmup", "mobility", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "warmup-neckstretch-003",
+    "name": "Estiramiento de cuello",
+    "nameEn": "Neck Stretches",
+    "category": "warmup-cooldown",
+    "bodyPart": "neck",
+    "equipment": "ninguno",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones por lado, 15 seg cada una",
+    "instructions": [
+      "Sientese con la espalda recta.",
+      "Incline la cabeza suavemente hacia un lado, oreja hacia el hombro.",
+      "Mantenga 15 segundos. Sienta el estiramiento sin dolor.",
+      "Repita al otro lado. Luego lleve el menton al pecho 15 seg."
+    ],
+    "contraindications": ["Mareo al mover el cuello", "Lesion cervical reciente"],
+    "painThreshold": 7,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "ouRhQE2iOI8",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Movilidad cervical - protocolo de calentamiento"],
+      "level": "established"
+    },
+    "tags": ["warmup", "stretching", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "warmup-hamstretch-004",
+    "name": "Estiramiento de isquiotibiales sentado",
+    "nameEn": "Seated Hamstring Stretch",
+    "category": "warmup-cooldown",
+    "bodyPart": "hamstrings",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 20 seg por pierna",
+    "instructions": [
+      "Sientese al borde de una silla.",
+      "Extienda una pierna al frente con el talon en el suelo.",
+      "Incline el tronco ligeramente hacia adelante desde la cadera.",
+      "Sienta el estiramiento en la parte posterior del muslo. Mantenga 20 seg."
+    ],
+    "contraindications": ["Hernia de disco activa"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "VuJZ6dqMf8M",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Flexibilidad muscular - protocolo de enfriamiento"],
+      "level": "established"
+    },
+    "tags": ["cooldown", "stretching", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "warmup-quadstretch-005",
+    "name": "Estiramiento de cuadriceps de pie",
+    "nameEn": "Standing Quad Stretch",
+    "category": "warmup-cooldown",
+    "bodyPart": "quadriceps",
+    "equipment": "silla o pared para apoyo",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 20 seg por pierna",
+    "instructions": [
+      "De pie, sujetese de una silla o pared.",
+      "Doble una rodilla y sujete el tobillo detras de usted.",
+      "Lleve el talon suavemente hacia el gluteo.",
+      "Mantenga 20 seg. Si no alcanza el tobillo, use una toalla."
+    ],
+    "contraindications": ["Dolor agudo de rodilla al flexionar"],
+    "painThreshold": 4,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "oWu8RxtWdGE",
+      "source": "AskDoctorJo"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Flexibilidad post-ejercicio - consenso fisiologia"],
+      "level": "established"
+    },
+    "tags": ["cooldown", "stretching", "beginner", "standing"]
+  },
+  {
+    "id": "breathing-diaphragm-001",
+    "name": "Respiracion diafragmatica",
+    "nameEn": "Diaphragmatic Breathing",
+    "category": "breathing-relaxation",
+    "bodyPart": "diaphragm",
+    "equipment": "ninguno",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 120,
+    "reps": "10 respiraciones profundas",
+    "instructions": [
+      "Sientese comodo con una mano en el pecho y otra en el abdomen.",
+      "Inhale lentamente por la nariz contando hasta 4. El abdomen debe subir.",
+      "Exhale lentamente por la boca contando hasta 6.",
+      "La mano del pecho debe moverse muy poco. Repita 10 veces."
+    ],
+    "contraindications": [],
+    "painThreshold": 10,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "9jpchJcKivk",
+      "source": "Michelle Kenway Physiotherapy"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["Frontiers in Psychology 2025 - Exercise for emotional wellbeing"],
+      "level": "moderate"
+    },
+    "tags": ["breathing", "relaxation", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "breathing-pmr-002",
+    "name": "Relajacion muscular progresiva",
+    "nameEn": "Progressive Muscle Relaxation",
+    "category": "breathing-relaxation",
+    "bodyPart": "full-body",
+    "equipment": "silla comoda",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 300,
+    "reps": "1 ciclo completo de 5 minutos",
+    "instructions": [
+      "Sientese comodo. Cierre los ojos si lo desea.",
+      "Tense los musculos de los pies durante 5 seg. Relaje 10 seg.",
+      "Suba a las pantorrillas: tense 5 seg, relaje 10 seg.",
+      "Continue subiendo: muslos, abdomen, manos, brazos, hombros, cara.",
+      "En cada grupo: tense, note la tension, relaje, note la diferencia."
+    ],
+    "contraindications": [],
+    "painThreshold": 10,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "2IJUD-e14FY",
+      "source": "Hospital for Special Surgery"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["Frontiers in Psychology 2025", "Jacobson Progressive Relaxation - established clinical technique"],
+      "level": "moderate"
+    },
+    "tags": ["relaxation", "stress-relief", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "breathing-chairyoga-003",
+    "name": "Yoga suave en silla",
+    "nameEn": "Gentle Chair Yoga",
+    "category": "breathing-relaxation",
+    "bodyPart": "full-body",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 300,
+    "reps": "5 minutos de movimientos guiados",
+    "instructions": [
+      "Sientese con la espalda recta, pies apoyados en el suelo.",
+      "Siga los movimientos del video: estiramientos suaves de brazos, tronco y piernas.",
+      "Respire profundamente con cada movimiento.",
+      "No fuerce ningun movimiento. Si duele, detenga."
+    ],
+    "contraindications": [],
+    "painThreshold": 10,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "1DYH5ud3zHo",
+      "source": "Yoga with Kassandra"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC10094373 - Chair Yoga for OA - quasi-experimental study"],
+      "level": "moderate"
+    },
+    "tags": ["yoga", "relaxation", "beginner", "chair-exercise", "pain-friendly"]
+  }
+]
