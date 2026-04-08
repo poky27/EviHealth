@@ -2,7 +2,7 @@
   {
     "id": "knee-quad-set-001",
     "name": "Cuadriceps isometrico sentado",
-    "nameEn": "Seated Quad Sets",
+    "nameEn": "Seated Long Arc Quad",
     "category": "knee-strengthening",
     "bodyPart": "quadriceps",
     "equipment": "silla",
@@ -22,8 +22,8 @@
     "chairBased": true,
     "media": {
       "type": "youtube",
-      "videoId": "IF5eDfb8afM",
-      "source": "Baptist Health"
+      "videoId": "t4SRA2wqVVA",
+      "source": "MedBridge (PT Education)"
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
