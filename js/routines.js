@@ -12,8 +12,9 @@ const ROUTINE_TYPES = {
     message: 'Excelente dia para dar lo mejor!',
     blocks: [
       { category: 'warmup-cooldown', count: 2, label: 'Calentamiento', tags: ['warmup'] },
-      { category: 'knee-strengthening', count: 3, label: 'Fortalecimiento de rodilla' },
-      { category: 'kyphosis-correction', count: 3, label: 'Correccion de postura' },
+      { category: 'knee-strengthening', count: 2, label: 'Fortalecimiento de rodilla' },
+      { category: 'core-safe', count: 2, label: 'Core seguro (perimetro abdominal)' },
+      { category: 'kyphosis-correction', count: 2, label: 'Correccion de postura' },
       { category: 'warmup-cooldown', count: 2, label: 'Enfriamiento', tags: ['cooldown', 'stretching'] }
     ]
   },
@@ -26,7 +27,8 @@ const ROUTINE_TYPES = {
     blocks: [
       { category: 'chair-exercises', count: 3, label: 'Ejercicios en silla' },
       { category: 'warmup-cooldown', count: 2, label: 'Estiramientos suaves', tags: ['stretching'] },
-      { category: 'kyphosis-correction', count: 2, label: 'Postura suave', chairOnly: true },
+      { category: 'core-safe', count: 1, label: 'Core suave', chairOnly: true },
+      { category: 'kyphosis-correction', count: 1, label: 'Postura suave', chairOnly: true },
       { category: 'breathing-relaxation', count: 1, label: 'Respiracion' }
     ]
   },
@@ -38,8 +40,9 @@ const ROUTINE_TYPES = {
     message: 'Un paso a la vez. Cada movimiento cuenta.',
     blocks: [
       { category: 'warmup-cooldown', count: 1, label: 'Calentamiento ligero', tags: ['warmup'] },
-      { category: 'knee-strengthening', count: 2, label: 'Rodilla facil', maxDifficulty: 1 },
-      { category: 'balance-mobility', count: 2, label: 'Equilibrio y movilidad' },
+      { category: 'knee-strengthening', count: 1, label: 'Rodilla facil', maxDifficulty: 1 },
+      { category: 'core-safe', count: 1, label: 'Core facil', maxDifficulty: 1 },
+      { category: 'balance-mobility', count: 1, label: 'Equilibrio y movilidad' },
       { category: 'breathing-relaxation', count: 1, label: 'Respiracion' }
     ]
   },

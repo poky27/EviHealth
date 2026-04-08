@@ -393,6 +393,39 @@
         </div>
 
         <div class="tracking-card">
+          <div class="tracking-title">Perimetro abdominal (cm)</div>
+          <p class="hint">Mida con cinta metrica a la altura del ombligo, de pie, al final de una exhalacion normal.</p>
+          <input type="number" id="tracking-waist" class="form-input" placeholder="Ej: 95" min="40" max="200" step="0.5">
+          <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
+            Riesgo CV aumentado: Hombre >=90 cm | Mujer >=80 cm (Latinoamerica)
+            <br>Riesgo sustancialmente aumentado: H >=102 cm | M >=88 cm
+            <br>[GUIA-OFICIAL: IDF 2006 / NHLBI-AHA]
+          </p>
+        </div>
+
+        <div class="tracking-card">
+          <div class="tracking-title">Estatura (cm) — solo primera vez</div>
+          <p class="hint">Necesario para calcular Cintura/Altura (WHtR).</p>
+          <input type="number" id="tracking-height" class="form-input" placeholder="Ej: 170" min="100" max="220" step="0.5">
+          <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
+            WHtR >= 0.5 = riesgo CV aumentado ("tu cintura debe ser menos de la mitad de tu estatura")
+            <br>[TEXTO-REF: Ashwell 2012, Obesity Reviews, PMID 22106927]
+            <br>[TEXTO-REF: JAMDA 2024, meta-analisis 17 estudios — WHtR superior a BMI en adultos mayores]
+          </p>
+        </div>
+
+        <div class="tracking-card">
+          <div class="tracking-title">Perimetro de cuello (cm)</div>
+          <p class="hint">Mida justo debajo de la nuez de Adan (prominencia laringea).</p>
+          <input type="number" id="tracking-neck" class="form-input" placeholder="Ej: 38" min="20" max="60" step="0.5">
+          <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
+            Marcador emergente de riesgo CV, correlacion con resistencia insulinica
+            <br>[TEXTO-REF: PMID 38313007 (2024) — confiable en ancianos fragiles]
+            <br>[TEXTO-REF: PMID 34682509 (2021) — correlacion con modelo SCORE CV]
+          </p>
+        </div>
+
+        <div class="tracking-card">
           <div class="tracking-title">Capacidad funcional (autoevaluacion)</div>
           <p class="hint">Del 1 al 5, como califica su capacidad para actividades diarias?</p>
           <div class="mood-grid">

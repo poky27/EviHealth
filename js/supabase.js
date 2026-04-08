@@ -116,6 +116,10 @@ export async function saveWeeklyTracking(participantId, tracking) {
     pain_vas: tracking.pain,
     chair_stand_count: tracking.chairStandCount,
     owd_cm: tracking.owdCm,
+    waist_cm: tracking.waistCm || null,
+    height_cm: tracking.heightCm || null,
+    neck_cm: tracking.neckCm || null,
+    whtr: tracking.whtr || null,
     functional_capacity: tracking.functionalCapacity
   });
 }

@@ -234,8 +234,23 @@ function onSaveTracking() {
   const pain = parseInt(document.getElementById('tracking-pain-slider')?.value || 0);
   const chairStand = parseInt(document.getElementById('tracking-chairstand')?.value || 0);
   const owd = parseFloat(document.getElementById('tracking-owd')?.value || 0);
+  const waist = parseFloat(document.getElementById('tracking-waist')?.value || 0);
+  const height = parseFloat(document.getElementById('tracking-height')?.value || 0);
+  const neck = parseFloat(document.getElementById('tracking-neck')?.value || 0);
   const funcBtn = document.querySelector('.func-btn.selected');
   const functional = funcBtn ? parseInt(funcBtn.dataset.func) : null;
+
+  // Calculate WHtR if both values provided
+  const whtr = (waist > 0 && height > 0) ? parseFloat((waist / height).toFixed(3)) : null;
+
+  // Save height to profile (only needed once)
+  if (height > 0) {
+    const profile = getUserProfile();
+    if (profile && !profile.height) {
+      profile.height = height;
+      saveUserProfile(profile);
+    }
+  }
 
   const record = {
     date: new Date().toISOString().split('T')[0],
@@ -243,6 +258,10 @@ function onSaveTracking() {
     pain,
     chairStandCount: chairStand,
     owdCm: owd,
+    waistCm: waist,
+    heightCm: height,
+    neckCm: neck,
+    whtr,
     functionalCapacity: functional,
     weekNumber: getWeekNumber()
   };
@@ -357,17 +376,24 @@ function renderOutcomesSummary(data) {
   const painDelta = latest.pain - first.pain;
   const chairDelta = latest.chairStandCount - first.chairStandCount;
   const owdDelta = latest.owdCm - first.owdCm;
+  const waistDelta = (latest.waistCm || 0) - (first.waistCm || 0);
+  const neckDelta = (latest.neckCm || 0) - (first.neckCm || 0);
 
   function trendBadge(delta, invertBetter = false) {
     const improving = invertBetter ? delta > 0 : delta < 0;
     if (Math.abs(delta) < 0.5) return '<span class="outcome-trend trend-stable">Estable</span>';
-    if (improving) return `<span class="outcome-trend trend-improving">Mejorando (${delta > 0 ? '+' : ''}${delta})</span>`;
-    return `<span class="outcome-trend trend-worsening">Cambio (${delta > 0 ? '+' : ''}${delta})</span>`;
+    if (improving) return `<span class="outcome-trend trend-improving">Mejorando (${delta > 0 ? '+' : ''}${delta.toFixed(1)})</span>`;
+    return `<span class="outcome-trend trend-worsening">Cambio (${delta > 0 ? '+' : ''}${delta.toFixed(1)})</span>`;
   }
+
+  // WHtR risk interpretation
+  const whtrRisk = latest.whtr
+    ? (latest.whtr >= 0.5 ? '<span class="outcome-trend trend-worsening">Riesgo CV</span>' : '<span class="outcome-trend trend-improving">Normal</span>')
+    : '';
 
   container.innerHTML = `
     <div class="tracking-card">
-      <div class="tracking-title">Resumen de resultados</div>
+      <div class="tracking-title">Resultados funcionales</div>
       <div class="outcome-row">
         <span class="outcome-label">Dolor (VAS)</span>
         <span class="outcome-value">${latest.pain}/10</span>
@@ -388,11 +414,35 @@ function renderOutcomesSummary(data) {
         <span class="outcome-value">${latest.functionalCapacity || '-'}/5</span>
         ${data.length > 1 ? trendBadge((latest.functionalCapacity || 0) - (first.functionalCapacity || 0), true) : ''}
       </div>
-      <p style="font-size:13px;color:var(--color-text-light);margin-top:12px;">
-        ${data.length} medicion(es) | Semana ${latest.weekNumber || 1} |
-        Primera medicion: ${first.date}
+    </div>
+
+    <div class="tracking-card">
+      <div class="tracking-title">Medidas antropometricas (Riesgo CV)</div>
+      ${latest.waistCm ? `<div class="outcome-row">
+        <span class="outcome-label">Perimetro abdominal</span>
+        <span class="outcome-value">${latest.waistCm} cm</span>
+        ${data.length > 1 && first.waistCm ? trendBadge(waistDelta) : ''}
+      </div>` : ''}
+      ${latest.whtr ? `<div class="outcome-row">
+        <span class="outcome-label">Cintura/Altura (WHtR)</span>
+        <span class="outcome-value">${latest.whtr}</span>
+        ${whtrRisk}
+      </div>` : ''}
+      ${latest.neckCm ? `<div class="outcome-row">
+        <span class="outcome-label">Perimetro de cuello</span>
+        <span class="outcome-value">${latest.neckCm} cm</span>
+        ${data.length > 1 && first.neckCm ? trendBadge(neckDelta) : ''}
+      </div>` : ''}
+      ${!latest.waistCm && !latest.neckCm ? '<p style="color:var(--color-text-light);">Agrega medidas antropometricas arriba para ver riesgo CV.</p>' : ''}
+      <p style="font-size:12px;color:var(--color-text-light);margin-top:8px;">
+        [GUIA-OFICIAL: IDF 2006, OMS 2008] | [TEXTO-REF: Ashwell 2012, JAMDA 2024]
       </p>
     </div>
+
+    <p style="font-size:13px;color:var(--color-text-light);margin-top:8px;text-align:center;">
+      ${data.length} medicion(es) | Semana ${latest.weekNumber || 1} |
+      Primera: ${first.date}
+    </p>
   `;
 }
 
@@ -414,9 +464,9 @@ function onExportData() {
 
   // Tracking data
   csv += 'MEDICIONES SEMANALES\n';
-  csv += 'Fecha,Semana,Dolor_VAS,Chair_Stand_30s,OWD_cm,Capacidad_Funcional\n';
+  csv += 'Fecha,Semana,Dolor_VAS,Chair_Stand_30s,OWD_cm,Perimetro_Abdominal_cm,Estatura_cm,WHtR,Perimetro_Cuello_cm,Capacidad_Funcional\n';
   tracking.forEach(t => {
-    csv += `${t.date},${t.weekNumber},${t.pain},${t.chairStandCount},${t.owdCm},${t.functionalCapacity || ''}\n`;
+    csv += `${t.date},${t.weekNumber},${t.pain},${t.chairStandCount},${t.owdCm},${t.waistCm || ''},${t.heightCm || ''},${t.whtr || ''},${t.neckCm || ''},${t.functionalCapacity || ''}\n`;
   });
 
   csv += '\nSESIONES DE EJERCICIO\n';

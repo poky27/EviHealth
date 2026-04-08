@@ -1123,5 +1123,204 @@
       "level": "moderate"
     },
     "tags": ["yoga", "relaxation", "beginner", "chair-exercise", "pain-friendly"]
+  },
+  {
+    "id": "core-bridge-001",
+    "name": "Puente de gluteos",
+    "nameEn": "Glute Bridge",
+    "category": "core-safe",
+    "bodyPart": "glutes",
+    "equipment": "colchoneta",
+    "position": "supine",
+    "difficulty": 1,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones, 5 segundos arriba",
+    "instructions": [
+      "Acuestese boca arriba con las rodillas dobladas y los pies apoyados.",
+      "Apriete los gluteos y levante la cadera hacia el techo.",
+      "Mantenga 5 segundos arriba formando una linea recta rodilla-cadera-hombro.",
+      "Baje lentamente. Repita 10 veces."
+    ],
+    "contraindications": ["Dolor lumbar agudo al levantar la cadera"],
+    "painThreshold": 6,
+    "moodMinimum": 1,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "PhTDzR0TpZs",
+      "source": "Hinge Health (PT)"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["ACSM Position Stand - Core training for older adults", "Harvard Health - Core exercises seniors"],
+      "level": "established"
+    },
+    "tags": ["core", "glutes", "beginner", "floor-exercise", "anti-flexion", "pain-friendly"]
+  },
+  {
+    "id": "core-deadbug-002",
+    "name": "Bicho muerto (Dead Bug)",
+    "nameEn": "Dead Bug",
+    "category": "core-safe",
+    "bodyPart": "core",
+    "equipment": "colchoneta",
+    "position": "supine",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "8 repeticiones por lado",
+    "instructions": [
+      "Acuestese boca arriba. Levante brazos hacia el techo y rodillas a 90 grados.",
+      "Lentamente extienda un brazo hacia atras y la pierna opuesta hacia adelante.",
+      "Mantenga la espalda baja pegada al suelo durante todo el movimiento.",
+      "Vuelva a la posicion inicial. Alterne lados. 8 por lado."
+    ],
+    "contraindications": ["Dolor lumbar al extender la pierna"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "GbSC02oU3To",
+      "source": "Hinge Health (PT)"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Anti-extension core training - rehabilitacion moderna", "Harvard Health Core Exercises"],
+      "level": "established"
+    },
+    "tags": ["core", "anti-extension", "beginner", "floor-exercise"]
+  },
+  {
+    "id": "core-birddog-003",
+    "name": "Perro-pajaro (Bird Dog)",
+    "nameEn": "Bird Dog",
+    "category": "core-safe",
+    "bodyPart": "core",
+    "equipment": "colchoneta",
+    "position": "quadruped",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "8 repeticiones por lado, 3 seg cada una",
+    "instructions": [
+      "Coloquese en cuatro puntos (manos y rodillas).",
+      "Extienda un brazo al frente y la pierna opuesta hacia atras.",
+      "Mantenga el tronco estable, sin rotar. Sostenga 3 segundos.",
+      "Vuelva al inicio. Alterne lados. 8 repeticiones por lado."
+    ],
+    "contraindications": ["Dolor de munecas severo", "Dolor de rodilla al apoyarse"],
+    "painThreshold": 5,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "sznVxQViN-Q",
+      "source": "Rehab My Patient"
+    },
+    "evidence": {
+      "tag": "TEXTO-REF",
+      "sources": ["PMC3997126 - Spinal stabilization exercises", "ACSM anti-rotation training"],
+      "level": "moderate"
+    },
+    "tags": ["core", "anti-rotation", "beginner", "floor-exercise"]
+  },
+  {
+    "id": "core-wallplank-004",
+    "name": "Plancha en pared",
+    "nameEn": "Wall Plank",
+    "category": "core-safe",
+    "bodyPart": "core",
+    "equipment": "pared",
+    "position": "standing",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "3 repeticiones x 15-20 segundos",
+    "instructions": [
+      "Parese frente a una pared a un brazo de distancia.",
+      "Coloque las manos en la pared a la altura de los hombros.",
+      "Inclinese hacia la pared manteniendo el cuerpo recto como una tabla.",
+      "Mantenga 15-20 segundos apretando el abdomen. Repita 3 veces."
+    ],
+    "contraindications": ["Dolor de hombro agudo al empujar"],
+    "painThreshold": 7,
+    "moodMinimum": 1,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "NtTqGFtb5eI",
+      "source": "Bob & Brad (Licensed PTs)"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Plancha modificada para adultos mayores - consenso rehabilitacion", "Harvard Health Core Exercises"],
+      "level": "established"
+    },
+    "tags": ["core", "isometric", "beginner", "standing", "pain-friendly"]
+  },
+  {
+    "id": "core-pelvictilt-005",
+    "name": "Inclinacion pelvica sentado",
+    "nameEn": "Seated Pelvic Tilts",
+    "category": "core-safe",
+    "bodyPart": "core",
+    "equipment": "silla",
+    "position": "seated",
+    "difficulty": 1,
+    "durationSeconds": 60,
+    "reps": "10 repeticiones lentas",
+    "instructions": [
+      "Sientese en una silla firme con los pies apoyados.",
+      "Incline la pelvis hacia adelante arqueando ligeramente la espalda baja.",
+      "Luego incline la pelvis hacia atras, aplanando la espalda.",
+      "Alterne lentamente. Sienta como se activa el abdomen bajo. 10 veces."
+    ],
+    "contraindications": [],
+    "painThreshold": 8,
+    "moodMinimum": 1,
+    "chairBased": true,
+    "media": {
+      "type": "youtube",
+      "videoId": "ep5OpYmyCps",
+      "source": "E3 Rehab Exercise Library"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Activacion transverso abdominal - consenso rehabilitacion pelvica"],
+      "level": "established"
+    },
+    "tags": ["core", "beginner", "chair-exercise", "pain-friendly", "pelvic-floor"]
+  },
+  {
+    "id": "core-standingcore-006",
+    "name": "Ejercicio core de pie con banda",
+    "nameEn": "Standing Core with Band",
+    "category": "core-safe",
+    "bodyPart": "core",
+    "equipment": "banda elastica (opcional)",
+    "position": "standing",
+    "difficulty": 2,
+    "durationSeconds": 90,
+    "reps": "10 repeticiones por lado",
+    "instructions": [
+      "Parese con los pies al ancho de hombros.",
+      "Sostenga una banda elastica o toalla al frente con ambas manos.",
+      "Empuje las manos al frente manteniendo el tronco firme sin rotar.",
+      "Gire lentamente el tronco hacia un lado resistiendo con el abdomen.",
+      "Vuelva al centro. Alterne lados. 10 por lado."
+    ],
+    "contraindications": ["Dolor de hombro al empujar al frente"],
+    "painThreshold": 6,
+    "moodMinimum": 2,
+    "chairBased": false,
+    "media": {
+      "type": "youtube",
+      "videoId": "-btBxA9jVJo",
+      "source": "More Life Health Seniors"
+    },
+    "evidence": {
+      "tag": "CONSENSO",
+      "sources": ["Anti-rotation training - rehabilitacion funcional moderna"],
+      "level": "established"
+    },
+    "tags": ["core", "anti-rotation", "beginner", "standing"]
   }
 ]
