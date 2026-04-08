@@ -552,8 +552,8 @@
     "chairBased": true,
     "media": {
       "type": "youtube",
-      "videoId": "xxf93bq9-vA",
-      "source": "Institute of Sports and Spines"
+      "videoId": "70O9UOydjGs",
+      "source": "Senior Fitness With Meredith"
     },
     "evidence": {
       "tag": "TEXTO-REF",
@@ -861,8 +861,8 @@
   },
   {
     "id": "warmup-marchstanding-001",
-    "name": "Marcha en el lugar",
-    "nameEn": "Marching in Place",
+    "name": "Marcha en el lugar (de pie)",
+    "nameEn": "Marching in Place (Standing)",
     "category": "warmup-cooldown",
     "bodyPart": "full-body",
     "equipment": "ninguno",
@@ -882,8 +882,8 @@
     "chairBased": false,
     "media": {
       "type": "youtube",
-      "videoId": "xxf93bq9-vA",
-      "source": "Institute of Sports and Spines"
+      "videoId": "u1gmWFvEluM",
+      "source": "Margaret Martin PT (MelioGuide)"
     },
     "evidence": {
       "tag": "CONSENSO",

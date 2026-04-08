@@ -559,6 +559,70 @@ function renderRoutineScreen() {
   }
 }
 
+// ====== TEXT-TO-SPEECH (instrucciones en espanol) ======
+let isSpeaking = false;
+
+function speakInstructions(exerciseName, instructions) {
+  if (!('speechSynthesis' in window)) {
+    alert('Tu navegador no soporta lectura en voz alta.');
+    return;
+  }
+
+  // Stop any current speech
+  window.speechSynthesis.cancel();
+
+  if (isSpeaking) {
+    isSpeaking = false;
+    updateSpeakButton(false);
+    return;
+  }
+
+  isSpeaking = true;
+  updateSpeakButton(true);
+
+  // Build full text
+  const fullText = `${exerciseName}. ${instructions.join('. ')}`;
+
+  const utterance = new SpeechSynthesisUtterance(fullText);
+  utterance.lang = 'es-ES';
+  utterance.rate = 0.85; // Slower for elderly
+  utterance.pitch = 1.0;
+  utterance.volume = 1.0;
+
+  // Try to find a Spanish voice
+  const voices = window.speechSynthesis.getVoices();
+  const spanishVoice = voices.find(v => v.lang.startsWith('es'));
+  if (spanishVoice) utterance.voice = spanishVoice;
+
+  utterance.onend = () => {
+    isSpeaking = false;
+    updateSpeakButton(false);
+  };
+
+  utterance.onerror = () => {
+    isSpeaking = false;
+    updateSpeakButton(false);
+  };
+
+  window.speechSynthesis.speak(utterance);
+}
+
+function stopSpeaking() {
+  window.speechSynthesis.cancel();
+  isSpeaking = false;
+  updateSpeakButton(false);
+}
+
+function updateSpeakButton(speaking) {
+  const btn = document.getElementById('btn-speak');
+  if (btn) {
+    btn.innerHTML = speaking
+      ? '\u{1F507} Detener voz'
+      : '\u{1F50A} Escuchar instrucciones';
+    btn.classList.toggle('speaking', speaking);
+  }
+}
+
 // ====== EXERCISE PLAYER ======
 function startRoutine() {
   if (!currentRoutine || currentRoutine.exercises.length === 0) return;
@@ -619,7 +683,11 @@ function renderExercise() {
   if (equipment) equipment.innerHTML = `\u{1FA91} ${ex.equipment}`;
 
   if (instructions) {
-    instructions.innerHTML = ex.instructions.map((step, i) => `
+    instructions.innerHTML = `
+      <button id="btn-speak" class="btn-speak" onclick="FenixFit.speak()">
+        \u{1F50A} Escuchar instrucciones
+      </button>
+    ` + ex.instructions.map((step, i) => `
       <div class="instruction-step">
         <span class="step-number">${i + 1}</span>
         <span>${step}</span>
@@ -635,6 +703,7 @@ function renderExercise() {
 
 function nextExercise() {
   if (!currentRoutine) return;
+  stopSpeaking();
   completedIds.push(currentRoutine.exercises[currentExerciseIndex].id);
 
   if (currentExerciseIndex < currentRoutine.exercises.length - 1) {
@@ -648,6 +717,7 @@ function nextExercise() {
 
 function skipExercise() {
   if (!currentRoutine) return;
+  stopSpeaking();
   skippedIds.push(currentRoutine.exercises[currentExerciseIndex].id);
 
   if (currentExerciseIndex < currentRoutine.exercises.length - 1) {
@@ -798,7 +868,12 @@ async function init() {
     showScreen,
     closeModal,
     savePostMood,
-    toggleNightMode
+    toggleNightMode,
+    speak: () => {
+      if (!currentRoutine) return;
+      const ex = currentRoutine.exercises[currentExerciseIndex];
+      if (ex) speakInstructions(ex.name, ex.instructions);
+    }
   };
 }
 
