@@ -1,44 +1,82 @@
 // muscle-map.js — SVG body map for muscle visualization and pain selection
-// Extracted from evihealth-mapa-dolor-v7.html by Blanca
+// Male: evihealth-mapa-dolor-v7.html (by Blanca)
+// Female: react-native-body-highlighter (HichamELBSI)
 
-let frontalSVG = '';
-let dorsalSVG = '';
-let loadPromise = null;
+const maps = {
+  male: { frontal: '', dorsal: '', promise: null },
+  female: { frontal: '', dorsal: '', promise: null }
+};
+let currentSex = 'male';
 const activeJoints = new Set();
 
-// Load the SVG — returns a promise that resolves when ready
-function loadBodyMap() {
-  if (loadPromise) return loadPromise;
+function getMapFile(sex) {
+  return sex === 'female' ? 'assets/body-map-female.html' : 'assets/body-map-v7.html';
+}
 
-  loadPromise = fetch('assets/body-map-v7.html')
+function getRegex(sex) {
+  if (sex === 'female') {
+    return {
+      frontal: /<svg[^>]*id="dz-svg-female-frontal"[^>]*>[\s\S]*?<\/svg>/,
+      dorsal: /<svg[^>]*id="dz-svg-female-dorsal"[^>]*>[\s\S]*?<\/svg>/
+    };
+  }
+  return {
+    frontal: /<svg[^>]*id="dz-svg-frontal"[^>]*>[\s\S]*?<\/svg>/,
+    dorsal: /<svg[^>]*id="dz-svg-dorsal"[^>]*>[\s\S]*?<\/svg>/
+  };
+}
+
+// Load the SVG for a specific sex
+function loadBodyMap(sex) {
+  if (!sex) sex = currentSex;
+  const map = maps[sex];
+  if (map.promise) return map.promise;
+
+  const file = getMapFile(sex);
+  const regex = getRegex(sex);
+
+  map.promise = fetch(file)
     .then(r => r.text())
     .then(html => {
-      const frontalMatch = html.match(/<svg[^>]*id="dz-svg-frontal"[^>]*>[\s\S]*?<\/svg>/);
-      if (frontalMatch) frontalSVG = frontalMatch[0];
+      const frontalMatch = html.match(regex.frontal);
+      if (frontalMatch) map.frontal = frontalMatch[0];
 
-      const dorsalMatch = html.match(/<svg[^>]*id="dz-svg-dorsal"[^>]*>[\s\S]*?<\/svg>/);
-      if (dorsalMatch) dorsalSVG = dorsalMatch[0];
+      const dorsalMatch = html.match(regex.dorsal);
+      if (dorsalMatch) map.dorsal = dorsalMatch[0];
 
-      console.log('Body map loaded. Frontal:', frontalSVG.length, 'Dorsal:', dorsalSVG.length);
+      console.log(`Body map (${sex}) loaded. Frontal: ${map.frontal.length}, Dorsal: ${map.dorsal.length}`);
     })
     .catch(err => {
-      console.error('Error loading body map:', err);
-      loadPromise = null; // Allow retry
+      console.error(`Error loading body map (${sex}):`, err);
+      map.promise = null;
     });
 
-  return loadPromise;
+  return map.promise;
+}
+
+// Detect user sex from profile in localStorage
+function detectUserSex() {
+  try {
+    const profile = JSON.parse(localStorage.getItem('evihealth_user'));
+    if (profile && profile.sex) {
+      currentSex = profile.sex === 'female' ? 'female' : 'male';
+    }
+  } catch { /* ignore */ }
+  return currentSex;
 }
 
 // Render muscle map in exercise player (read-only, highlights muscles)
 export async function renderExerciseMap(containerId, muscles) {
-  await loadBodyMap();
+  const sex = detectUserSex();
+  await loadBodyMap(sex);
 
+  const map = maps[sex];
   const container = document.getElementById(containerId);
-  if (!container || !frontalSVG) return;
+  if (!container || !map.frontal) return;
 
-  let svg = frontalSVG
-    .replace('id="dz-svg-frontal"', 'id="exercise-muscle-svg"')
-    .replace('class="dz-silueta dz-visible"', 'class="muscle-map-svg"');
+  let svg = map.frontal
+    .replace(/id="dz-svg-[^"]*"/, 'id="exercise-muscle-svg"')
+    .replace(/class="dz-silueta[^"]*"/, 'class="muscle-map-svg"');
 
   container.innerHTML = `
     <div class="muscle-map-container">
@@ -72,19 +110,21 @@ export async function renderExerciseMap(containerId, muscles) {
 
 // Render pain map in check-in (interactive, clickable joints) — frontal + dorsal
 export async function renderPainMap(containerId) {
-  await loadBodyMap();
+  const sex = detectUserSex();
+  await loadBodyMap(sex);
 
+  const map = maps[sex];
   const container = document.getElementById(containerId);
-  if (!container || !frontalSVG) return;
+  if (!container || !map.frontal) return;
 
-  let svgFront = frontalSVG
-    .replace('id="dz-svg-frontal"', 'id="pain-map-frontal"')
-    .replace('class="dz-silueta dz-visible"', 'class="pain-map-svg"');
+  let svgFront = map.frontal
+    .replace(/id="dz-svg-[^"]*"/, 'id="pain-map-frontal"')
+    .replace(/class="dz-silueta[^"]*"/, 'class="pain-map-svg"');
 
-  let svgBack = dorsalSVG
-    ? dorsalSVG
-        .replace('id="dz-svg-dorsal"', 'id="pain-map-dorsal"')
-        .replace('class="dz-silueta"', 'class="pain-map-svg"')
+  let svgBack = map.dorsal
+    ? map.dorsal
+        .replace(/id="dz-svg-[^"]*"/, 'id="pain-map-dorsal"')
+        .replace(/class="dz-silueta[^"]*"/, 'class="pain-map-svg"')
     : '';
 
   container.innerHTML = `
@@ -181,5 +221,7 @@ export function clearJoints() {
 }
 
 export async function initMuscleMap() {
-  await loadBodyMap();
+  detectUserSex();
+  // Preload the map for detected sex, lazy-load the other
+  await loadBodyMap(currentSex);
 }
