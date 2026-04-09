@@ -18,7 +18,7 @@
 
   <!-- DISCLAIMER BANNER -->
   <div id="disclaimer-bar" class="disclaimer-bar">
-    Esta app NO reemplaza la consulta medica. Consulte a su medico antes de iniciar ejercicios.
+    Esta app NO reemplaza la consulta médica. Consulte a su médico antes de iniciar ejercicios.
     <button onclick="this.parentElement.classList.add('hidden')" aria-label="Cerrar aviso">OK</button>
   </div>
 
@@ -27,14 +27,14 @@
     <div class="screen-content">
       <div class="welcome-icon">&#x1F3CB;&#xFE0F;</div>
       <h1>EviHealth</h1>
-      <p class="subtitle">Ejercicios con evidencia clinica</p>
+      <p class="subtitle">Ejercicios con evidencia clínica</p>
       <p style="text-align:center;font-size:14px;color:var(--color-text-light);margin-bottom:20px;font-style:italic;">
-        Diseno protector de vision basado en evidencia clinica
+        Diseño protector de visión basado en evidencia clínica
       </p>
       <div class="welcome-features">
         <div class="feature-item">
           <span class="feature-icon">&#x1F60A;</span>
-          <span>Adaptado a tu animo</span>
+          <span>Adaptado a tu ánimo</span>
         </div>
         <div class="feature-item">
           <span class="feature-icon">&#x1F9B4;</span>
@@ -46,11 +46,11 @@
         </div>
         <div class="feature-item">
           <span class="feature-icon">&#x2705;</span>
-          <span>Con evidencia clinica verificada</span>
+          <span>Con evidencia clínica verificada</span>
         </div>
         <div class="feature-item">
           <span class="feature-icon">&#x1F4CA;</span>
-          <span>Seguimiento para estudio clinico</span>
+          <span>Seguimiento para estudio clínico</span>
         </div>
       </div>
       <!-- Usuario ya registrado -->
@@ -58,7 +58,7 @@
         <div class="streak-box" style="margin-bottom:16px;">
           <span class="streak-flame">&#x1F525;</span>
           <span id="welcome-streak" class="streak-number">0</span>
-          <span class="streak-label">dias seguidos</span>
+          <span class="streak-label">días seguidos</span>
         </div>
         <p id="welcome-name" style="text-align:center;font-size:22px;font-weight:600;margin-bottom:16px;"></p>
         <button class="btn-primary" id="btn-welcome-continue">
@@ -78,7 +78,7 @@
 
       <div class="disclaimer-box">
         <strong>Aviso importante:</strong> Esta app es una herramienta de apoyo.
-        NO reemplaza la consulta medica. Si experimenta dolor agudo, mareo o
+        NO reemplaza la consulta médica. Si experimenta dolor agudo, mareo o
         dificultad para respirar, detenga el ejercicio inmediatamente.
       </div>
     </div>
@@ -88,7 +88,7 @@
   <section id="screen-register" class="screen">
     <div class="screen-content">
       <h2>Crear tu perfil</h2>
-      <p class="hint">Esta informacion nos ayuda a personalizar tus ejercicios</p>
+      <p class="hint">Esta información nos ayuda a personalizar tus ejercicios</p>
 
       <div class="form-group">
         <label class="form-label">Nombre o iniciales</label>
@@ -101,7 +101,7 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label">Sexo biologico</label>
+        <label class="form-label">Sexo biológico</label>
         <div class="sex-buttons">
           <button class="sex-btn" data-sex="male" id="sex-male">
             <span class="sex-btn-icon">&#x2642;&#xFE0F;</span>
@@ -115,13 +115,13 @@
       </div>
 
       <div class="form-group">
-        <label class="form-label">Condicion principal</label>
+        <label class="form-label">Condición principal</label>
         <select id="reg-condition" class="form-select">
           <option value="">Seleccione...</option>
           <option value="knee-oa">Dolor de rodilla / Artrosis</option>
           <option value="kyphosis">Cifosis / Joroba</option>
           <option value="both">Ambas (rodilla + postura)</option>
-          <option value="general">Salud general / Prevencion</option>
+          <option value="general">Salud general / Prevención</option>
           <option value="other">Otra</option>
         </select>
       </div>
@@ -130,7 +130,7 @@
         <label class="form-label">Nivel de actividad actual</label>
         <select id="reg-activity" class="form-select">
           <option value="">Seleccione...</option>
-          <option value="sedentary">Sedentario (poco o ningun ejercicio)</option>
+          <option value="sedentary">Sedentario (poco o ningún ejercicio)</option>
           <option value="light">Ligero (camina ocasionalmente)</option>
           <option value="moderate">Moderado (ejercicio 1-2 veces/semana)</option>
           <option value="active">Activo (ejercicio 3+ veces/semana)</option>
@@ -139,18 +139,18 @@
 
       <div class="consent-box">
         <strong>Consentimiento informado</strong><br><br>
-        Al usar esta aplicacion, usted acepta que:<br>
+        Al usar esta aplicación, usted acepta que:<br>
         - Sus datos se almacenan localmente en su dispositivo.<br>
-        - La informacion es anonima y se usa para mejorar las recomendaciones.<br>
+        - La información es anónima y se usa para mejorar las recomendaciones.<br>
         - Puede exportar sus datos en cualquier momento.<br>
-        - Esta app NO reemplaza la consulta medica profesional.<br>
+        - Esta app NO reemplaza la consulta médica profesional.<br>
         - Puede dejar de participar en cualquier momento sin consecuencias.<br>
-        - Los ejercicios estan basados en guias clinicas oficiales (ACR, OARSI, AAOS, EULAR, WHO).<br><br>
+        - Los ejercicios están basados en guías clínicas oficiales (ACR, OARSI, AAOS, EULAR, WHO).<br><br>
         <em>Estudio piloto: Efectividad de una app de ejercicios adaptativos en adultos mayores.</em>
       </div>
       <label class="consent-check">
         <input type="checkbox" id="reg-consent">
-        <span>He leido y acepto participar voluntariamente</span>
+        <span>He leído y acepto participar voluntariamente</span>
       </label>
 
       <button class="btn-primary" id="btn-register" disabled>
@@ -167,8 +167,8 @@
         <span class="dot"></span>
         <span class="dot"></span>
       </div>
-      <h2>Como te sientes hoy?</h2>
-      <p class="hint">Selecciona tu estado de animo</p>
+      <h2>¿Cómo te sientes hoy?</h2>
+      <p class="hint">Selecciona tu estado de ánimo</p>
       <div id="mood-buttons" class="mood-grid">
         <button class="mood-btn" data-mood="1" aria-label="Muy mal">
           <span class="mood-emoji">&#x1F61E;</span>
@@ -202,7 +202,7 @@
         <span class="dot active"></span>
         <span class="dot"></span>
       </div>
-      <h2>Cuanto dolor sientes?</h2>
+      <h2>¿Cuánto dolor sientes?</h2>
       <p class="hint">Desliza para indicar tu nivel de dolor</p>
 
       <div class="pain-display">
@@ -211,11 +211,11 @@
       </div>
       <div class="pain-labels-row">
         <span>Sin dolor</span>
-        <span>Dolor maximo</span>
+        <span>Dolor máximo</span>
       </div>
       <input type="range" id="pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
 
-      <h3 class="pain-location-title">Donde te duele mas?</h3>
+      <h3 class="pain-location-title">¿Dónde te duele más?</h3>
       <div id="pain-map-checkin">
         <!-- Pain map SVG loaded dynamically by muscle-map.js -->
       </div>
@@ -291,23 +291,23 @@
   <section id="screen-completed" class="screen">
     <div class="screen-content center-content">
       <div class="celebration-icon">&#x1F389;</div>
-      <h2>Felicidades!</h2>
+      <h2>¡Felicidades!</h2>
       <p id="completion-message" class="completion-msg"></p>
 
       <div id="streak-display" class="streak-box">
         <span class="streak-flame">&#x1F525;</span>
         <span id="streak-count" class="streak-number">0</span>
-        <span class="streak-label">dias seguidos</span>
+        <span class="streak-label">días seguidos</span>
       </div>
 
-      <h3>Dolor despues del ejercicio?</h3>
+      <h3>¿Dolor después del ejercicio?</h3>
       <div class="pain-display" style="margin:8px 0 4px;">
         <span id="post-pain-value" class="pain-number pain-low" style="font-size:48px;">0</span>
         <span class="pain-max">/ 10</span>
       </div>
       <input type="range" id="post-pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
 
-      <h3>Como te sientes ahora?</h3>
+      <h3>¿Cómo te sientes ahora?</h3>
       <div id="post-mood-buttons" class="mood-grid small">
         <button class="mood-btn" data-postmood="1"><span class="mood-emoji">&#x1F61E;</span></button>
         <button class="mood-btn" data-postmood="2"><span class="mood-emoji">&#x1F615;</span></button>
@@ -334,7 +334,7 @@
         <!-- Stats cards -->
       </div>
 
-      <h3>Ultimos 7 dias</h3>
+      <h3>Últimos 7 dias</h3>
       <div id="progress-chart" class="progress-chart">
         <!-- SVG chart -->
       </div>
@@ -355,19 +355,19 @@
   <!-- ====== SCREEN: TRACKING (Outcomes) ====== -->
   <section id="screen-tracking" class="screen">
     <div class="screen-content">
-      <h2>Seguimiento Clinico</h2>
+      <h2>Seguimiento Clínico</h2>
       <div id="user-profile-badge" class="user-badge"></div>
 
       <div class="evidence-info-banner">
         <strong>Mediciones validadas internacionalmente</strong>
         Usamos escalas recomendadas por OARSI y OMS para medir tu progreso
-        de forma que los datos sean utiles para investigacion clinica.
+        de forma que los datos sean útiles para investigación clínica.
       </div>
 
       <div class="tracking-section">
         <div class="tracking-card">
           <div class="tracking-title">Dolor (Escala VAS 0-10)</div>
-          <p class="hint">Como ha cambiado tu dolor esta semana?</p>
+          <p class="hint">¿Cómo ha cambiado tu dolor esta semana?</p>
           <div class="pain-display">
             <span id="tracking-pain-value" class="pain-number pain-low">0</span>
             <span class="pain-max">/ 10</span>
@@ -375,36 +375,36 @@
           <input type="range" id="tracking-pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
           <div class="vas-scale">
             <span>Sin dolor</span>
-            <span>Dolor maximo</span>
+            <span>Dolor máximo</span>
           </div>
         </div>
 
         <div class="tracking-card">
           <div class="tracking-title">Prueba Sentarse-Levantarse (30 seg)</div>
-          <p class="hint">Cuantas veces puede sentarse y levantarse de una silla en 30 segundos?</p>
+          <p class="hint">¿Cuántas veces puede sentarse y levantarse de una silla en 30 segundos?</p>
           <input type="number" id="tracking-chairstand" class="form-input" placeholder="Ej: 8" min="0" max="50">
           <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
-            Promedio normal 60-64 anos: 12-17 | 65-69: 11-16 | 70-74: 10-15 | 75-79: 10-14 | 80+: 8-13
+            Promedio normal 60-64 años: 12-17 | 65-69: 11-16 | 70-74: 10-15 | 75-79: 10-14 | 80+: 8-13
             <br>[GUIA-OFICIAL: Rikli & Jones, J Aging Phys Act 1999; CDC Senior Fitness Test]
           </p>
         </div>
 
         <div class="tracking-card">
           <div class="tracking-title">Distancia Occipucio-Pared (cm)</div>
-          <p class="hint">De pie contra la pared, cuantos cm hay entre su cabeza y la pared?</p>
+          <p class="hint">De pie contra la pared, ¿cuántos cm hay entre su cabeza y la pared?</p>
           <input type="number" id="tracking-owd" class="form-input" placeholder="Ej: 3.5" min="0" max="30" step="0.5">
           <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
             Normal: 0-4 cm | Cifosis: >4 cm
-            <br>[TEXTO-REF: Correlacion con angulo Cobb r=0.72, Arch Osteoporos 2018]
+            <br>[TEXTO-REF: Correlación con ángulo Cobb r=0.72, Arch Osteoporos 2018]
           </p>
         </div>
 
         <div class="tracking-card">
-          <div class="tracking-title">Perimetro abdominal (cm)</div>
-          <p class="hint">Mida con cinta metrica a la altura del ombligo, de pie, al final de una exhalacion normal.</p>
+          <div class="tracking-title">Perímetro abdominal (cm)</div>
+          <p class="hint">Mida con cinta métrica a la altura del ombligo, de pie, al final de una exhalación normal.</p>
           <input type="number" id="tracking-waist" class="form-input" placeholder="Ej: 95" min="40" max="200" step="0.5">
           <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
-            Riesgo CV aumentado: Hombre >=90 cm | Mujer >=80 cm (Latinoamerica)
+            Riesgo CV aumentado: Hombre >=90 cm | Mujer >=80 cm (Latinoamérica)
             <br>Riesgo sustancialmente aumentado: H >=102 cm | M >=88 cm
             <br>[GUIA-OFICIAL: IDF 2006 / NHLBI-AHA]
           </p>
@@ -417,27 +417,27 @@
           <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
             WHtR >= 0.5 = riesgo CV aumentado ("tu cintura debe ser menos de la mitad de tu estatura")
             <br>[TEXTO-REF: Ashwell 2012, Obesity Reviews, PMID 22106927]
-            <br>[TEXTO-REF: JAMDA 2024, meta-analisis 17 estudios — WHtR superior a BMI en adultos mayores]
+            <br>[TEXTO-REF: JAMDA 2024, meta-análisis 17 estudios — WHtR superior a BMI en adultos mayores]
           </p>
         </div>
 
         <div class="tracking-card">
-          <div class="tracking-title">Perimetro de cuello (cm)</div>
-          <p class="hint">Mida justo debajo de la nuez de Adan (prominencia laringea).</p>
+          <div class="tracking-title">Perímetro de cuello (cm)</div>
+          <p class="hint">Mida justo debajo de la nuez de Adan (prominencia laríngea).</p>
           <input type="number" id="tracking-neck" class="form-input" placeholder="Ej: 38" min="20" max="60" step="0.5">
           <p style="font-size:14px;color:var(--color-text-light);margin-top:4px;">
-            Marcador emergente de riesgo CV, correlacion con resistencia insulinica
-            <br>[TEXTO-REF: PMID 38313007 (2024) — confiable en ancianos fragiles]
-            <br>[TEXTO-REF: PMID 34682509 (2021) — correlacion con modelo SCORE CV]
+            Marcador emergente de riesgo CV, correlación con resistencia insulinica
+            <br>[TEXTO-REF: PMID 38313007 (2024) — confiable en ancianos frágiles]
+            <br>[TEXTO-REF: PMID 34682509 (2021) — correlación con modelo SCORE CV]
           </p>
         </div>
 
         <div class="tracking-card">
-          <div class="tracking-title">Capacidad funcional (autoevaluacion)</div>
-          <p class="hint">Del 1 al 5, como califica su capacidad para actividades diarias?</p>
+          <div class="tracking-title">Capacidad funcional (autoevaluación)</div>
+          <p class="hint">Del 1 al 5, ¿cómo califica su capacidad para actividades diarias?</p>
           <div class="mood-grid">
-            <button class="mood-btn func-btn" data-func="1"><span class="mood-emoji">1</span><span class="mood-label">Muy dificil</span></button>
-            <button class="mood-btn func-btn" data-func="2"><span class="mood-emoji">2</span><span class="mood-label">Dificil</span></button>
+            <button class="mood-btn func-btn" data-func="1"><span class="mood-emoji">1</span><span class="mood-label">Muy difícil</span></button>
+            <button class="mood-btn func-btn" data-func="2"><span class="mood-emoji">2</span><span class="mood-label">Difícil</span></button>
             <button class="mood-btn func-btn" data-func="3"><span class="mood-emoji">3</span><span class="mood-label">Regular</span></button>
             <button class="mood-btn func-btn" data-func="4"><span class="mood-emoji">4</span><span class="mood-label">Bien</span></button>
             <button class="mood-btn func-btn" data-func="5"><span class="mood-emoji">5</span><span class="mood-label">Excelente</span></button>
@@ -446,10 +446,10 @@
       </div>
 
       <button class="btn-primary" id="btn-save-tracking">
-        Guardar medicion semanal
+        Guardar medición semanal
       </button>
 
-      <h3 style="margin-top:24px;">Evolucion</h3>
+      <h3 style="margin-top:24px;">Evolución</h3>
       <div id="tracking-evolution" class="progress-chart">
         <!-- SVG evolution chart -->
       </div>
@@ -462,7 +462,7 @@
         &#x1F4E5; Exportar datos (CSV)
       </button>
       <p style="font-size:14px;color:var(--color-text-light);text-align:center;margin-top:8px;">
-        Exporta tus datos anonimizados para uso en investigacion clinica
+        Exporta tus datos anonimizados para uso en investigación clínica
       </p>
     </div>
   </section>
@@ -471,7 +471,7 @@
   <div id="evidence-modal" class="modal hidden">
     <div class="modal-content">
       <button class="modal-close" onclick="FenixFit.closeModal()">&times;</button>
-      <h3 id="modal-title">Evidencia Clinica</h3>
+      <h3 id="modal-title">Evidencia Clínica</h3>
       <div id="modal-body"></div>
     </div>
   </div>
