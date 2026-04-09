@@ -53,9 +53,29 @@
           <span>Seguimiento para estudio clinico</span>
         </div>
       </div>
-      <button class="btn-primary" id="btn-welcome-start">
-        Comenzar
-      </button>
+      <!-- Usuario ya registrado -->
+      <div id="welcome-returning" class="hidden">
+        <div class="streak-box" style="margin-bottom:16px;">
+          <span class="streak-flame">&#x1F525;</span>
+          <span id="welcome-streak" class="streak-number">0</span>
+          <span class="streak-label">dias seguidos</span>
+        </div>
+        <p id="welcome-name" style="text-align:center;font-size:22px;font-weight:600;margin-bottom:16px;"></p>
+        <button class="btn-primary" id="btn-welcome-continue">
+          Continuar ejercicios
+        </button>
+        <button class="btn-secondary" id="btn-welcome-logout" style="margin-top:8px;">
+          Cambiar usuario
+        </button>
+      </div>
+
+      <!-- Usuario nuevo -->
+      <div id="welcome-new">
+        <button class="btn-primary" id="btn-welcome-start">
+          Comenzar
+        </button>
+      </div>
+
       <div class="disclaimer-box">
         <strong>Aviso importante:</strong> Esta app es una herramienta de apoyo.
         NO reemplaza la consulta medica. Si experimenta dolor agudo, mareo o
@@ -196,23 +216,8 @@
       <input type="range" id="pain-slider" class="pain-slider" min="0" max="10" value="0" step="1">
 
       <h3 class="pain-location-title">Donde te duele mas?</h3>
-      <div id="pain-location" class="pain-location-grid">
-        <button class="location-btn" data-location="knee-left">
-          <span class="location-icon">&#x1F9B5;</span>
-          Rodilla izq.
-        </button>
-        <button class="location-btn selected" data-location="knee-right">
-          <span class="location-icon">&#x1F9B5;</span>
-          Rodilla der.
-        </button>
-        <button class="location-btn" data-location="both-knees">
-          <span class="location-icon">&#x1F9B5;&#x1F9B5;</span>
-          Ambas rodillas
-        </button>
-        <button class="location-btn" data-location="upper-back">
-          <span class="location-icon">&#x1F9B4;</span>
-          Espalda alta
-        </button>
+      <div id="pain-map-checkin">
+        <!-- Pain map SVG loaded dynamically by muscle-map.js -->
       </div>
 
       <button class="btn-primary" id="btn-generate-routine">
@@ -272,6 +277,8 @@
       <div id="exercise-instructions" class="exercise-instructions">
         <!-- Step by step -->
       </div>
+
+      <div id="exercise-muscles"></div>
 
       <div class="exercise-nav">
         <button class="btn-secondary" id="btn-skip">Saltar</button>

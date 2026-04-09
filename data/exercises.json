@@ -16,7 +16,9 @@
       "Apriete el musculo del muslo (cuadriceps) con fuerza durante 5 segundos.",
       "Relaje lentamente. Repita 10 veces por pierna."
     ],
-    "contraindications": ["Dolor agudo de rodilla durante la contraccion"],
+    "contraindications": [
+      "Dolor agudo de rodilla durante la contraccion"
+    ],
     "painThreshold": 7,
     "moodMinimum": 1,
     "chairBased": true,
@@ -27,10 +29,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["AAOS Knee Conditioning Program 2023", "ACR/AF Guidelines 2021"],
+      "sources": [
+        "AAOS Knee Conditioning Program 2023",
+        "ACR/AF Guidelines 2021"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "isometric", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "knee-oa",
+      "isometric",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "quadriceps": 2
+    }
   },
   {
     "id": "knee-slr-002",
@@ -50,7 +64,10 @@
       "Mantenga 5 segundos arriba. Baje lentamente.",
       "Repita 10 veces. Cambie de pierna."
     ],
-    "contraindications": ["Dolor lumbar agudo", "Hernia de disco activa"],
+    "contraindications": [
+      "Dolor lumbar agudo",
+      "Hernia de disco activa"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -61,10 +78,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["AAOS Knee Conditioning Program 2023", "OARSI 2019 Guidelines"],
+      "sources": [
+        "AAOS Knee Conditioning Program 2023",
+        "OARSI 2019 Guidelines"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "strengthening", "beginner", "floor-exercise"]
+    "tags": [
+      "knee-oa",
+      "strengthening",
+      "beginner",
+      "floor-exercise"
+    ],
+    "muscles": {
+      "quadriceps": 2,
+      "abs": 1
+    }
   },
   {
     "id": "knee-hamcurl-003",
@@ -83,7 +112,9 @@
       "Mantenga 3 segundos arriba.",
       "Baje lentamente. Repita 10 veces por pierna."
     ],
-    "contraindications": ["Dolor agudo detras de la rodilla"],
+    "contraindications": [
+      "Dolor agudo detras de la rodilla"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -94,10 +125,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["ACR/AF 2021", "OARSI 2019"],
+      "sources": [
+        "ACR/AF 2021",
+        "OARSI 2019"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "strengthening", "beginner", "standing"]
+    "tags": [
+      "knee-oa",
+      "strengthening",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "hamstring": 2,
+      "calves": 1
+    }
   },
   {
     "id": "knee-calfraise-004",
@@ -116,7 +159,10 @@
       "Mantenga 2 segundos arriba.",
       "Baje lentamente. Repita 15 veces."
     ],
-    "contraindications": ["Dolor agudo en la pantorrilla", "Trombosis venosa profunda"],
+    "contraindications": [
+      "Dolor agudo en la pantorrilla",
+      "Trombosis venosa profunda"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": false,
@@ -127,10 +173,20 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["AAOS Knee Conditioning Program 2023"],
+      "sources": [
+        "AAOS Knee Conditioning Program 2023"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "strengthening", "beginner", "standing"]
+    "tags": [
+      "knee-oa",
+      "strengthening",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "calves": 2
+    }
   },
   {
     "id": "knee-wallsit-005",
@@ -149,7 +205,10 @@
       "Mantenga la posicion 15-20 segundos.",
       "Suba lentamente. Descanse 10 seg. Repita 3 veces."
     ],
-    "contraindications": ["Dolor de rodilla mayor a 4/10 durante el ejercicio", "Inflamacion activa severa"],
+    "contraindications": [
+      "Dolor de rodilla mayor a 4/10 durante el ejercicio",
+      "Inflamacion activa severa"
+    ],
     "painThreshold": 4,
     "moodMinimum": 3,
     "chairBased": false,
@@ -160,10 +219,23 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["OARSI 2019", "ACR/AF 2021"],
+      "sources": [
+        "OARSI 2019",
+        "ACR/AF 2021"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "isometric", "intermediate", "standing"]
+    "tags": [
+      "knee-oa",
+      "isometric",
+      "intermediate",
+      "standing"
+    ],
+    "muscles": {
+      "quadriceps": 2,
+      "gluteal": 1,
+      "hamstring": 1
+    }
   },
   {
     "id": "knee-stepup-006",
@@ -182,7 +254,11 @@
       "Suba la otra pierna. Baje con la pierna sana primero.",
       "Repita 10 veces. Descanse. Haga otra serie si puede."
     ],
-    "contraindications": ["Dolor de rodilla mayor a 5/10", "Inestabilidad de rodilla", "Problemas de equilibrio severos"],
+    "contraindications": [
+      "Dolor de rodilla mayor a 5/10",
+      "Inestabilidad de rodilla",
+      "Problemas de equilibrio severos"
+    ],
     "painThreshold": 4,
     "moodMinimum": 3,
     "chairBased": false,
@@ -193,10 +269,23 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["OARSI 2019", "EULAR 2018"],
+      "sources": [
+        "OARSI 2019",
+        "EULAR 2018"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "functional", "intermediate", "standing"]
+    "tags": [
+      "knee-oa",
+      "functional",
+      "intermediate",
+      "standing"
+    ],
+    "muscles": {
+      "quadriceps": 2,
+      "gluteal": 1,
+      "calves": 1
+    }
   },
   {
     "id": "knee-extension-007",
@@ -215,7 +304,9 @@
       "Mantenga 5 segundos apretando el cuadriceps.",
       "Baje lentamente. Repita 10 veces por pierna."
     ],
-    "contraindications": ["Dolor agudo al extender la rodilla"],
+    "contraindications": [
+      "Dolor agudo al extender la rodilla"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": true,
@@ -226,10 +317,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["AAOS Knee Conditioning Program 2023", "ACR/AF 2021"],
+      "sources": [
+        "AAOS Knee Conditioning Program 2023",
+        "ACR/AF 2021"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "strengthening", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "knee-oa",
+      "strengthening",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "quadriceps": 2
+    }
   },
   {
     "id": "knee-minisquat-008",
@@ -248,7 +351,9 @@
       "Mantenga las rodillas alineadas con los dedos del pie.",
       "Suba lentamente. Repita 10 veces."
     ],
-    "contraindications": ["Dolor de rodilla mayor a 5/10 durante el movimiento"],
+    "contraindications": [
+      "Dolor de rodilla mayor a 5/10 durante el movimiento"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -259,10 +364,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["ACR/AF 2021", "OARSI 2019"],
+      "sources": [
+        "ACR/AF 2021",
+        "OARSI 2019"
+      ],
       "level": "strong"
     },
-    "tags": ["knee-oa", "strengthening", "beginner", "standing"]
+    "tags": [
+      "knee-oa",
+      "strengthening",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "quadriceps": 2,
+      "gluteal": 1
+    }
   },
   {
     "id": "kyphosis-chintuck-001",
@@ -281,7 +398,10 @@
       "Imagine que alguien empuja suavemente su frente hacia atras.",
       "Mantenga 5 segundos. Relaje. Repita 10 veces."
     ],
-    "contraindications": ["Dolor cervical agudo", "Mareo al mover el cuello"],
+    "contraindications": [
+      "Dolor cervical agudo",
+      "Mareo al mover el cuello"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": true,
@@ -292,10 +412,22 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC3997126 - Exercise for Age-Related Hyperkyphotic Posture (Systematic Review)"],
+      "sources": [
+        "PMC3997126 - Exercise for Age-Related Hyperkyphotic Posture (Systematic Review)"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "posture", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "kyphosis",
+      "posture",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "neck": 2,
+      "trapezius": 1
+    }
   },
   {
     "id": "kyphosis-wallangel-002",
@@ -314,7 +446,10 @@
       "Deslice los brazos hacia arriba formando una 'Y'.",
       "Baje lentamente. Repita 10 veces de forma lenta y controlada."
     ],
-    "contraindications": ["Dolor de hombro agudo", "Limitacion severa de movilidad de hombro"],
+    "contraindications": [
+      "Dolor de hombro agudo",
+      "Limitacion severa de movilidad de hombro"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -325,10 +460,23 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC3997126 - Systematic Review on Hyperkyphosis Exercises", "PMC5873977 - SHEAF RCT"],
+      "sources": [
+        "PMC3997126 - Systematic Review on Hyperkyphosis Exercises",
+        "PMC5873977 - SHEAF RCT"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "posture", "beginner", "standing"]
+    "tags": [
+      "kyphosis",
+      "posture",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "trapezius": 2,
+      "deltoids": 1,
+      "chest": 1
+    }
   },
   {
     "id": "kyphosis-catcow-003",
@@ -347,7 +495,10 @@
       "VACA: Arquee la espalda hacia abajo, mire hacia arriba.",
       "Alterne lentamente entre gato y vaca. 10 ciclos."
     ],
-    "contraindications": ["Dolor de munecas severo", "Dolor lumbar agudo al arquearse"],
+    "contraindications": [
+      "Dolor de munecas severo",
+      "Dolor lumbar agudo al arquearse"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -358,10 +509,21 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC3997126 - Systematic Review on Hyperkyphosis"],
+      "sources": [
+        "PMC3997126 - Systematic Review on Hyperkyphosis"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "mobility", "beginner", "floor-exercise"]
+    "tags": [
+      "kyphosis",
+      "mobility",
+      "beginner",
+      "floor-exercise"
+    ],
+    "muscles": {
+      "lower-back": 2,
+      "abs": 1
+    }
   },
   {
     "id": "kyphosis-thorext-004",
@@ -380,7 +542,10 @@
       "Arquee la espalda superior sobre el respaldo de la silla.",
       "Mantenga 3 segundos. Vuelva al centro. Repita 10 veces."
     ],
-    "contraindications": ["Osteoporosis severa de columna", "Dolor agudo al extender"],
+    "contraindications": [
+      "Osteoporosis severa de columna",
+      "Dolor agudo al extender"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": true,
@@ -391,10 +556,23 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC5873977 - SHEAF RCT on Spine Strengthening", "PMC3997126"],
+      "sources": [
+        "PMC5873977 - SHEAF RCT on Spine Strengthening",
+        "PMC3997126"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "extension", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "kyphosis",
+      "extension",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "lower-back": 2,
+      "trapezius": 1
+    }
   },
   {
     "id": "kyphosis-doorway-005",
@@ -413,7 +591,10 @@
       "De un paso adelante hasta sentir estiramiento en el pecho.",
       "Mantenga 20 segundos. Relaje. Repita 3 veces."
     ],
-    "contraindications": ["Dolor de hombro agudo", "Inestabilidad de hombro"],
+    "contraindications": [
+      "Dolor de hombro agudo",
+      "Inestabilidad de hombro"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": false,
@@ -424,10 +605,21 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC3997126 - Anterior trunk stretching for kyphosis"],
+      "sources": [
+        "PMC3997126 - Anterior trunk stretching for kyphosis"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "stretching", "beginner", "standing"]
+    "tags": [
+      "kyphosis",
+      "stretching",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "chest": 2,
+      "deltoids": 1
+    }
   },
   {
     "id": "kyphosis-ytw-006",
@@ -447,7 +639,10 @@
       "W: Codos doblados formando una W. Apriete omoplatos 3 seg.",
       "Repita 5 veces cada posicion."
     ],
-    "contraindications": ["Dolor de hombro severo", "Dolor lumbar al estar boca abajo"],
+    "contraindications": [
+      "Dolor de hombro severo",
+      "Dolor lumbar al estar boca abajo"
+    ],
     "painThreshold": 4,
     "moodMinimum": 3,
     "chairBased": false,
@@ -458,10 +653,23 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC5873977 - SHEAF RCT", "PMC3997126"],
+      "sources": [
+        "PMC5873977 - SHEAF RCT",
+        "PMC3997126"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "strengthening", "intermediate", "floor-exercise"]
+    "tags": [
+      "kyphosis",
+      "strengthening",
+      "intermediate",
+      "floor-exercise"
+    ],
+    "muscles": {
+      "trapezius": 2,
+      "deltoids": 1,
+      "lower-back": 1
+    }
   },
   {
     "id": "kyphosis-scapular-007",
@@ -480,7 +688,9 @@
       "Mantenga 5 segundos apretando.",
       "Relaje. Repita 10 veces."
     ],
-    "contraindications": ["Dolor agudo entre los omoplatos"],
+    "contraindications": [
+      "Dolor agudo entre los omoplatos"
+    ],
     "painThreshold": 7,
     "moodMinimum": 1,
     "chairBased": true,
@@ -491,10 +701,21 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC3997126 - Systematic Review on Hyperkyphosis"],
+      "sources": [
+        "PMC3997126 - Systematic Review on Hyperkyphosis"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "isometric", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "kyphosis",
+      "isometric",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "trapezius": 2
+    }
   },
   {
     "id": "kyphosis-superman-008",
@@ -513,7 +734,10 @@
       "Mantenga 3 segundos.",
       "Baje. Alterne lados. Repita 8 veces por lado."
     ],
-    "contraindications": ["Dolor lumbar agudo", "Estenosis espinal"],
+    "contraindications": [
+      "Dolor lumbar agudo",
+      "Estenosis espinal"
+    ],
     "painThreshold": 4,
     "moodMinimum": 2,
     "chairBased": false,
@@ -524,10 +748,21 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Rehabilitacion de extensores espinales - consenso clinico"],
+      "sources": [
+        "Rehabilitacion de extensores espinales - consenso clinico"
+      ],
       "level": "moderate"
     },
-    "tags": ["kyphosis", "strengthening", "beginner", "floor-exercise"]
+    "tags": [
+      "kyphosis",
+      "strengthening",
+      "beginner",
+      "floor-exercise"
+    ],
+    "muscles": {
+      "lower-back": 2,
+      "gluteal": 1
+    }
   },
   {
     "id": "chair-marching-001",
@@ -557,10 +792,22 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC10094373 - Chair Exercise for OA", "Harvard Health Chair Exercises 2024"],
+      "sources": [
+        "PMC10094373 - Chair Exercise for OA",
+        "Harvard Health Chair Exercises 2024"
+      ],
       "level": "moderate"
     },
-    "tags": ["chair-exercise", "cardio", "beginner", "pain-friendly", "warmup"]
+    "tags": [
+      "chair-exercise",
+      "cardio",
+      "beginner",
+      "pain-friendly",
+      "warmup"
+    ],
+    "muscles": {
+      "quadriceps": 1
+    }
   },
   {
     "id": "chair-sitstand-002",
@@ -579,7 +826,10 @@
       "Levantese usando la fuerza de las piernas (use las manos si necesita).",
       "Sientese lentamente controlando el descenso. Repita 8-10 veces."
     ],
-    "contraindications": ["Mareo al levantarse", "Dolor de rodilla mayor a 6/10"],
+    "contraindications": [
+      "Mareo al levantarse",
+      "Dolor de rodilla mayor a 6/10"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": true,
@@ -590,10 +840,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["AAOS Knee Conditioning Program 2023", "OARSI 2019 - Functional training"],
+      "sources": [
+        "AAOS Knee Conditioning Program 2023",
+        "OARSI 2019 - Functional training"
+      ],
       "level": "strong"
     },
-    "tags": ["chair-exercise", "functional", "beginner", "knee-oa"]
+    "tags": [
+      "chair-exercise",
+      "functional",
+      "beginner",
+      "knee-oa"
+    ],
+    "muscles": {
+      "quadriceps": 2,
+      "gluteal": 1
+    }
   },
   {
     "id": "chair-hipflex-003",
@@ -623,10 +885,21 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC10094373 - Chair Exercise Functional Fitness", "Harvard Health 2024"],
+      "sources": [
+        "PMC10094373 - Chair Exercise Functional Fitness",
+        "Harvard Health 2024"
+      ],
       "level": "moderate"
     },
-    "tags": ["chair-exercise", "beginner", "pain-friendly", "hip"]
+    "tags": [
+      "chair-exercise",
+      "beginner",
+      "pain-friendly",
+      "hip"
+    ],
+    "muscles": {
+      "abs": 1
+    }
   },
   {
     "id": "chair-heelraise-004",
@@ -656,10 +929,20 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["AAOS Knee Conditioning Program 2023"],
+      "sources": [
+        "AAOS Knee Conditioning Program 2023"
+      ],
       "level": "strong"
     },
-    "tags": ["chair-exercise", "strengthening", "beginner", "pain-friendly"]
+    "tags": [
+      "chair-exercise",
+      "strengthening",
+      "beginner",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "calves": 2
+    }
   },
   {
     "id": "chair-torso-005",
@@ -678,7 +961,9 @@
       "Mantenga 3 segundos.",
       "Vuelva al centro. Gire a la izquierda. Repita 10 veces por lado."
     ],
-    "contraindications": ["Dolor lumbar agudo al girar"],
+    "contraindications": [
+      "Dolor lumbar agudo al girar"
+    ],
     "painThreshold": 7,
     "moodMinimum": 1,
     "chairBased": true,
@@ -689,10 +974,21 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Movilidad espinal - consenso rehabilitacion geriatrica"],
+      "sources": [
+        "Movilidad espinal - consenso rehabilitacion geriatrica"
+      ],
       "level": "established"
     },
-    "tags": ["chair-exercise", "mobility", "beginner", "pain-friendly"]
+    "tags": [
+      "chair-exercise",
+      "mobility",
+      "beginner",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "obliques": 2,
+      "abs": 1
+    }
   },
   {
     "id": "chair-ankle-006",
@@ -722,10 +1018,21 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Prevencion de TVP y movilidad articular - consenso clinico"],
+      "sources": [
+        "Prevencion de TVP y movilidad articular - consenso clinico"
+      ],
       "level": "established"
     },
-    "tags": ["chair-exercise", "mobility", "beginner", "pain-friendly", "warmup"]
+    "tags": [
+      "chair-exercise",
+      "mobility",
+      "beginner",
+      "pain-friendly",
+      "warmup"
+    ],
+    "muscles": {
+      "calves": 1
+    }
   },
   {
     "id": "balance-heeltoe-001",
@@ -744,7 +1051,10 @@
       "Camine 10 pasos en linea recta, talon-punta.",
       "Gire con cuidado y regrese. Repita 2-3 veces."
     ],
-    "contraindications": ["Vertigo activo", "Riesgo alto de caidas sin supervision"],
+    "contraindications": [
+      "Vertigo activo",
+      "Riesgo alto de caidas sin supervision"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -755,10 +1065,22 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["NIA Go4Life Program", "EULAR 2018 - Balance training for OA"],
+      "sources": [
+        "NIA Go4Life Program",
+        "EULAR 2018 - Balance training for OA"
+      ],
       "level": "strong"
     },
-    "tags": ["balance", "functional", "beginner", "standing"]
+    "tags": [
+      "balance",
+      "functional",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "calves": 1,
+      "quadriceps": 1
+    }
   },
   {
     "id": "balance-singleleg-002",
@@ -777,7 +1099,10 @@
       "Mantenga el equilibrio 10-15 segundos.",
       "Baje. Repita 3 veces por pierna. Intente soltar la mano si puede."
     ],
-    "contraindications": ["Vertigo severo", "Riesgo alto de caidas"],
+    "contraindications": [
+      "Vertigo severo",
+      "Riesgo alto de caidas"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -788,10 +1113,23 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["NIA Go4Life Program", "EULAR 2018 - Fall prevention"],
+      "sources": [
+        "NIA Go4Life Program",
+        "EULAR 2018 - Fall prevention"
+      ],
       "level": "strong"
     },
-    "tags": ["balance", "functional", "beginner", "standing"]
+    "tags": [
+      "balance",
+      "functional",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "gluteal": 2,
+      "quadriceps": 1,
+      "calves": 1
+    }
   },
   {
     "id": "balance-sidelegraise-003",
@@ -810,7 +1148,9 @@
       "No incline el tronco. Mantenga 2 segundos.",
       "Baje lentamente. Repita 10 veces por pierna."
     ],
-    "contraindications": ["Dolor de cadera agudo"],
+    "contraindications": [
+      "Dolor de cadera agudo"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -821,10 +1161,21 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["NIA Go4Life Program", "OARSI 2019"],
+      "sources": [
+        "NIA Go4Life Program",
+        "OARSI 2019"
+      ],
       "level": "strong"
     },
-    "tags": ["balance", "strengthening", "beginner", "standing"]
+    "tags": [
+      "balance",
+      "strengthening",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "gluteal": 2
+    }
   },
   {
     "id": "balance-tandem-004",
@@ -843,7 +1194,9 @@
       "Mantenga la posicion 15-20 segundos.",
       "Cambie el pie de adelante. Repita 3 veces por lado."
     ],
-    "contraindications": ["Vertigo activo"],
+    "contraindications": [
+      "Vertigo activo"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -854,10 +1207,21 @@
     },
     "evidence": {
       "tag": "GUIA-OFICIAL",
-      "sources": ["NIA Go4Life Program - Balance exercises"],
+      "sources": [
+        "NIA Go4Life Program - Balance exercises"
+      ],
       "level": "strong"
     },
-    "tags": ["balance", "functional", "beginner", "standing"]
+    "tags": [
+      "balance",
+      "functional",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "calves": 1,
+      "quadriceps": 1
+    }
   },
   {
     "id": "warmup-marchstanding-001",
@@ -887,10 +1251,21 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Fisiologia del ejercicio - calentamiento cardiovascular"],
+      "sources": [
+        "Fisiologia del ejercicio - calentamiento cardiovascular"
+      ],
       "level": "established"
     },
-    "tags": ["warmup", "cardio", "beginner", "standing"]
+    "tags": [
+      "warmup",
+      "cardio",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "quadriceps": 1,
+      "calves": 1
+    }
   },
   {
     "id": "warmup-shoulderroll-002",
@@ -920,10 +1295,22 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Movilidad articular - calentamiento estandar"],
+      "sources": [
+        "Movilidad articular - calentamiento estandar"
+      ],
       "level": "established"
     },
-    "tags": ["warmup", "mobility", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "warmup",
+      "mobility",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "trapezius": 1,
+      "deltoids": 1
+    }
   },
   {
     "id": "warmup-neckstretch-003",
@@ -942,7 +1329,10 @@
       "Mantenga 15 segundos. Sienta el estiramiento sin dolor.",
       "Repita al otro lado. Luego lleve el menton al pecho 15 seg."
     ],
-    "contraindications": ["Mareo al mover el cuello", "Lesion cervical reciente"],
+    "contraindications": [
+      "Mareo al mover el cuello",
+      "Lesion cervical reciente"
+    ],
     "painThreshold": 7,
     "moodMinimum": 1,
     "chairBased": true,
@@ -953,10 +1343,22 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Movilidad cervical - protocolo de calentamiento"],
+      "sources": [
+        "Movilidad cervical - protocolo de calentamiento"
+      ],
       "level": "established"
     },
-    "tags": ["warmup", "stretching", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "warmup",
+      "stretching",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "neck": 1,
+      "trapezius": 1
+    }
   },
   {
     "id": "warmup-hamstretch-004",
@@ -975,7 +1377,9 @@
       "Incline el tronco ligeramente hacia adelante desde la cadera.",
       "Sienta el estiramiento en la parte posterior del muslo. Mantenga 20 seg."
     ],
-    "contraindications": ["Hernia de disco activa"],
+    "contraindications": [
+      "Hernia de disco activa"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": true,
@@ -986,10 +1390,21 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Flexibilidad muscular - protocolo de enfriamiento"],
+      "sources": [
+        "Flexibilidad muscular - protocolo de enfriamiento"
+      ],
       "level": "established"
     },
-    "tags": ["cooldown", "stretching", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "cooldown",
+      "stretching",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "hamstring": 2
+    }
   },
   {
     "id": "warmup-quadstretch-005",
@@ -1008,7 +1423,9 @@
       "Lleve el talon suavemente hacia el gluteo.",
       "Mantenga 20 seg. Si no alcanza el tobillo, use una toalla."
     ],
-    "contraindications": ["Dolor agudo de rodilla al flexionar"],
+    "contraindications": [
+      "Dolor agudo de rodilla al flexionar"
+    ],
     "painThreshold": 4,
     "moodMinimum": 2,
     "chairBased": false,
@@ -1019,10 +1436,20 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Flexibilidad post-ejercicio - consenso fisiologia"],
+      "sources": [
+        "Flexibilidad post-ejercicio - consenso fisiologia"
+      ],
       "level": "established"
     },
-    "tags": ["cooldown", "stretching", "beginner", "standing"]
+    "tags": [
+      "cooldown",
+      "stretching",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "quadriceps": 2
+    }
   },
   {
     "id": "breathing-diaphragm-001",
@@ -1052,10 +1479,21 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["Frontiers in Psychology 2025 - Exercise for emotional wellbeing"],
+      "sources": [
+        "Frontiers in Psychology 2025 - Exercise for emotional wellbeing"
+      ],
       "level": "moderate"
     },
-    "tags": ["breathing", "relaxation", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "breathing",
+      "relaxation",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "abs": 1
+    }
   },
   {
     "id": "breathing-pmr-002",
@@ -1086,10 +1524,20 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["Frontiers in Psychology 2025", "Jacobson Progressive Relaxation - established clinical technique"],
+      "sources": [
+        "Frontiers in Psychology 2025",
+        "Jacobson Progressive Relaxation - established clinical technique"
+      ],
       "level": "moderate"
     },
-    "tags": ["relaxation", "stress-relief", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "relaxation",
+      "stress-relief",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {}
   },
   {
     "id": "breathing-chairyoga-003",
@@ -1119,10 +1567,19 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC10094373 - Chair Yoga for OA - quasi-experimental study"],
+      "sources": [
+        "PMC10094373 - Chair Yoga for OA - quasi-experimental study"
+      ],
       "level": "moderate"
     },
-    "tags": ["yoga", "relaxation", "beginner", "chair-exercise", "pain-friendly"]
+    "tags": [
+      "yoga",
+      "relaxation",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly"
+    ],
+    "muscles": {}
   },
   {
     "id": "core-bridge-001",
@@ -1141,7 +1598,9 @@
       "Mantenga 5 segundos arriba formando una linea recta rodilla-cadera-hombro.",
       "Baje lentamente. Repita 10 veces."
     ],
-    "contraindications": ["Dolor lumbar agudo al levantar la cadera"],
+    "contraindications": [
+      "Dolor lumbar agudo al levantar la cadera"
+    ],
     "painThreshold": 6,
     "moodMinimum": 1,
     "chairBased": false,
@@ -1152,10 +1611,25 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["ACSM Position Stand - Core training for older adults", "Harvard Health - Core exercises seniors"],
+      "sources": [
+        "ACSM Position Stand - Core training for older adults",
+        "Harvard Health - Core exercises seniors"
+      ],
       "level": "established"
     },
-    "tags": ["core", "glutes", "beginner", "floor-exercise", "anti-flexion", "pain-friendly"]
+    "tags": [
+      "core",
+      "glutes",
+      "beginner",
+      "floor-exercise",
+      "anti-flexion",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "gluteal": 2,
+      "abs": 1,
+      "hamstring": 1
+    }
   },
   {
     "id": "core-deadbug-002",
@@ -1174,7 +1648,9 @@
       "Mantenga la espalda baja pegada al suelo durante todo el movimiento.",
       "Vuelva a la posicion inicial. Alterne lados. 8 por lado."
     ],
-    "contraindications": ["Dolor lumbar al extender la pierna"],
+    "contraindications": [
+      "Dolor lumbar al extender la pierna"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -1185,10 +1661,21 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Anti-extension core training - rehabilitacion moderna", "Harvard Health Core Exercises"],
+      "sources": [
+        "Anti-extension core training - rehabilitacion moderna",
+        "Harvard Health Core Exercises"
+      ],
       "level": "established"
     },
-    "tags": ["core", "anti-extension", "beginner", "floor-exercise"]
+    "tags": [
+      "core",
+      "anti-extension",
+      "beginner",
+      "floor-exercise"
+    ],
+    "muscles": {
+      "abs": 2
+    }
   },
   {
     "id": "core-birddog-003",
@@ -1207,7 +1694,10 @@
       "Mantenga el tronco estable, sin rotar. Sostenga 3 segundos.",
       "Vuelva al inicio. Alterne lados. 8 repeticiones por lado."
     ],
-    "contraindications": ["Dolor de munecas severo", "Dolor de rodilla al apoyarse"],
+    "contraindications": [
+      "Dolor de munecas severo",
+      "Dolor de rodilla al apoyarse"
+    ],
     "painThreshold": 5,
     "moodMinimum": 2,
     "chairBased": false,
@@ -1218,10 +1708,23 @@
     },
     "evidence": {
       "tag": "TEXTO-REF",
-      "sources": ["PMC3997126 - Spinal stabilization exercises", "ACSM anti-rotation training"],
+      "sources": [
+        "PMC3997126 - Spinal stabilization exercises",
+        "ACSM anti-rotation training"
+      ],
       "level": "moderate"
     },
-    "tags": ["core", "anti-rotation", "beginner", "floor-exercise"]
+    "tags": [
+      "core",
+      "anti-rotation",
+      "beginner",
+      "floor-exercise"
+    ],
+    "muscles": {
+      "abs": 2,
+      "lower-back": 1,
+      "gluteal": 1
+    }
   },
   {
     "id": "core-wallplank-004",
@@ -1240,7 +1743,9 @@
       "Inclinese hacia la pared manteniendo el cuerpo recto como una tabla.",
       "Mantenga 15-20 segundos apretando el abdomen. Repita 3 veces."
     ],
-    "contraindications": ["Dolor de hombro agudo al empujar"],
+    "contraindications": [
+      "Dolor de hombro agudo al empujar"
+    ],
     "painThreshold": 7,
     "moodMinimum": 1,
     "chairBased": false,
@@ -1251,10 +1756,24 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Plancha modificada para adultos mayores - consenso rehabilitacion", "Harvard Health Core Exercises"],
+      "sources": [
+        "Plancha modificada para adultos mayores - consenso rehabilitacion",
+        "Harvard Health Core Exercises"
+      ],
       "level": "established"
     },
-    "tags": ["core", "isometric", "beginner", "standing", "pain-friendly"]
+    "tags": [
+      "core",
+      "isometric",
+      "beginner",
+      "standing",
+      "pain-friendly"
+    ],
+    "muscles": {
+      "abs": 2,
+      "chest": 1,
+      "deltoids": 1
+    }
   },
   {
     "id": "core-pelvictilt-005",
@@ -1284,10 +1803,22 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Activacion transverso abdominal - consenso rehabilitacion pelvica"],
+      "sources": [
+        "Activacion transverso abdominal - consenso rehabilitacion pelvica"
+      ],
       "level": "established"
     },
-    "tags": ["core", "beginner", "chair-exercise", "pain-friendly", "pelvic-floor"]
+    "tags": [
+      "core",
+      "beginner",
+      "chair-exercise",
+      "pain-friendly",
+      "pelvic-floor"
+    ],
+    "muscles": {
+      "abs": 2,
+      "lower-back": 1
+    }
   },
   {
     "id": "core-standingcore-006",
@@ -1307,7 +1838,9 @@
       "Gire lentamente el tronco hacia un lado resistiendo con el abdomen.",
       "Vuelva al centro. Alterne lados. 10 por lado."
     ],
-    "contraindications": ["Dolor de hombro al empujar al frente"],
+    "contraindications": [
+      "Dolor de hombro al empujar al frente"
+    ],
     "painThreshold": 6,
     "moodMinimum": 2,
     "chairBased": false,
@@ -1318,9 +1851,20 @@
     },
     "evidence": {
       "tag": "CONSENSO",
-      "sources": ["Anti-rotation training - rehabilitacion funcional moderna"],
+      "sources": [
+        "Anti-rotation training - rehabilitacion funcional moderna"
+      ],
       "level": "established"
     },
-    "tags": ["core", "anti-rotation", "beginner", "standing"]
+    "tags": [
+      "core",
+      "anti-rotation",
+      "beginner",
+      "standing"
+    ],
+    "muscles": {
+      "obliques": 2,
+      "abs": 1
+    }
   }
 ]

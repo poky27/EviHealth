@@ -1,13 +1,14 @@
 // checkin.js — Mood and pain check-in logic
+// Pain location now comes from muscle-map.js (interactive SVG)
+
+import { getActiveJointsString, clearJoints } from './muscle-map.js';
 
 let currentMood = null;
 let currentPain = 0;
-let currentPainLocation = 'both-knees';
 
 export function initCheckin() {
   setupMoodButtons();
   setupPainSlider();
-  setupPainLocation();
   setupPostMoodButtons();
 }
 
@@ -19,7 +20,6 @@ function setupMoodButtons() {
     const btn = e.target.closest('.mood-btn');
     if (!btn) return;
 
-    // Deselect all
     container.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('selected'));
     btn.classList.add('selected');
 
@@ -41,25 +41,10 @@ function setupPainSlider() {
     currentPain = parseInt(slider.value);
     display.textContent = currentPain;
 
-    // Update color based on pain level
     display.className = 'pain-number';
     if (currentPain <= 3) display.classList.add('pain-low');
     else if (currentPain <= 6) display.classList.add('pain-mid');
     else display.classList.add('pain-high');
-  });
-}
-
-function setupPainLocation() {
-  const container = document.getElementById('pain-location');
-  if (!container) return;
-
-  container.addEventListener('click', (e) => {
-    const btn = e.target.closest('.location-btn');
-    if (!btn) return;
-
-    container.querySelectorAll('.location-btn').forEach(b => b.classList.remove('selected'));
-    btn.classList.add('selected');
-    currentPainLocation = btn.dataset.location;
   });
 }
 
@@ -75,7 +60,6 @@ function setupPostMoodButtons() {
     btn.classList.add('selected');
 
     const postMood = parseInt(btn.dataset.postmood);
-    // Save post-exercise mood
     window.FenixFit.savePostMood(postMood);
   });
 }
@@ -89,13 +73,14 @@ export function getPain() {
 }
 
 export function getPainLocation() {
-  return currentPainLocation;
+  // Now returns joints from the interactive SVG map
+  return getActiveJointsString();
 }
 
 export function resetCheckin() {
   currentMood = null;
   currentPain = 0;
-  currentPainLocation = 'both-knees';
+  clearJoints();
 
   const slider = document.getElementById('pain-slider');
   const display = document.getElementById('pain-value');
@@ -106,8 +91,4 @@ export function resetCheckin() {
   }
 
   document.querySelectorAll('#mood-buttons .mood-btn').forEach(b => b.classList.remove('selected'));
-  document.querySelectorAll('#pain-location .location-btn').forEach(b => b.classList.remove('selected'));
-  // Default selection
-  const defaultLoc = document.querySelector('[data-location="both-knees"]');
-  if (defaultLoc) defaultLoc.classList.add('selected');
 }

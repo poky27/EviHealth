@@ -6,6 +6,7 @@ import { generateRoutine } from './routines.js';
 import { saveSession, getStreak, getYesterdayExerciseIds, renderProgressScreen } from './progress.js';
 import { createEvidenceBadge, createEvidenceBadgeHTML } from './evidence.js';
 import { registerParticipant, saveExerciseSession, saveWeeklyTracking, testConnection } from './supabase.js';
+import { initMuscleMap, renderExerciseMap, renderPainMap, getActiveJointsString, clearJoints } from './muscle-map.js';
 
 let currentRoutine = null;
 let currentExerciseIndex = 0;
@@ -55,6 +56,8 @@ function showScreen(screenId) {
   } else if (screenId === 'screen-progress') {
     document.querySelectorAll('.nav-btn')[2]?.classList.add('active');
     renderProgressScreen();
+  } else if (screenId === 'screen-checkin-pain') {
+    renderPainMap('pain-map-checkin');
   } else if (screenId === 'screen-tracking') {
     document.querySelectorAll('.nav-btn')[3]?.classList.add('active');
     renderTrackingScreen();
@@ -64,6 +67,32 @@ function showScreen(screenId) {
 function closeModal() {
   const modal = document.getElementById('evidence-modal');
   if (modal) modal.classList.add('hidden');
+}
+
+// ====== WELCOME SCREEN (persistencia) ======
+function setupWelcomeScreen() {
+  const profile = getUserProfile();
+  const returningDiv = document.getElementById('welcome-returning');
+  const newDiv = document.getElementById('welcome-new');
+
+  if (profile && returningDiv && newDiv) {
+    // Usuario existente
+    returningDiv.classList.remove('hidden');
+    newDiv.classList.add('hidden');
+
+    const nameEl = document.getElementById('welcome-name');
+    if (nameEl) nameEl.textContent = `Hola, ${profile.name}!`;
+
+    const streakEl = document.getElementById('welcome-streak');
+    if (streakEl) {
+      const streak = getStreak();
+      streakEl.textContent = streak.current;
+    }
+  } else if (returningDiv && newDiv) {
+    // Usuario nuevo
+    returningDiv.classList.add('hidden');
+    newDiv.classList.remove('hidden');
+  }
 }
 
 // ====== NIGHT MODE ======
@@ -695,6 +724,11 @@ function renderExercise() {
     `).join('');
   }
 
+  // Render muscle map for this exercise
+  if (ex.muscles) {
+    renderExerciseMap('exercise-muscles', ex.muscles);
+  }
+
   const btnNext = document.getElementById('btn-next');
   if (btnNext) {
     btnNext.textContent = currentExerciseIndex < total - 1 ? 'Siguiente' : 'Finalizar';
@@ -811,20 +845,32 @@ function savePostMood(postMood) {
 // ====== INITIALIZATION ======
 async function init() {
   await loadExercises();
+  await initMuscleMap();
   initCheckin();
   initRegistration();
   initTracking();
   restoreNightMode();
 
-  // Welcome button — go to register if new, check-in if returning
-  const btnWelcome = document.getElementById('btn-welcome-start');
-  if (btnWelcome) {
-    btnWelcome.addEventListener('click', () => {
-      if (isRegistered()) {
-        showScreen('screen-checkin-mood');
-      } else {
-        showScreen('screen-register');
-      }
+  // Setup welcome screen based on registration status
+  setupWelcomeScreen();
+
+  // Welcome buttons
+  const btnWelcomeStart = document.getElementById('btn-welcome-start');
+  if (btnWelcomeStart) {
+    btnWelcomeStart.addEventListener('click', () => showScreen('screen-register'));
+  }
+
+  const btnWelcomeContinue = document.getElementById('btn-welcome-continue');
+  if (btnWelcomeContinue) {
+    btnWelcomeContinue.addEventListener('click', () => showScreen('screen-checkin-mood'));
+  }
+
+  const btnWelcomeLogout = document.getElementById('btn-welcome-logout');
+  if (btnWelcomeLogout) {
+    btnWelcomeLogout.addEventListener('click', () => {
+      localStorage.removeItem(STORAGE_KEY_USER);
+      setupWelcomeScreen();
+      showScreen('screen-welcome');
     });
   }
 

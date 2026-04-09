@@ -939,6 +939,133 @@ h3 { font-size: var(--font-size-lg); font-weight: 600; margin-bottom: 0.5rem; }
   --color-text-light: #444444;
 }
 
+/* ====== MUSCLE MAP (exercise view) ====== */
+.muscle-map-container {
+  margin: 16px 0;
+}
+.muscle-map-title {
+  text-align: center;
+  font-size: var(--font-size-base);
+  margin-bottom: 8px;
+}
+.muscle-map-wrap {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 8px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+.muscle-map-svg {
+  max-width: 200px;
+  height: auto;
+}
+.muscle-map-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: var(--font-size-sm);
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.legend-primary { background: #0984e3; }
+.legend-secondary { background: #74b9ff; }
+
+/* SVG muscle colors from body map v7 */
+.bh-muscle {
+  fill: #3f3f3f;
+  stroke: #ffffff;
+  stroke-width: 1.5;
+  pointer-events: none;
+}
+.bh-muscle.bh-exercise-1 { fill: #74b9ff; }
+.bh-muscle.bh-exercise-2 { fill: #0984e3; }
+.bh-slug-head { fill: #d4c5b3; }
+
+/* ====== PAIN MAP (check-in view) ====== */
+.pain-map-container {
+  margin: 16px 0;
+}
+.pain-map-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.pain-tab {
+  flex: 1;
+  padding: 10px;
+  background: var(--color-bg-card);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+  text-align: center;
+}
+.pain-tab.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+.pain-map-wrap {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 8px;
+  text-align: center;
+  border: 1px solid var(--color-border);
+}
+.pain-map-svg {
+  max-width: 100%;
+  height: auto;
+  max-height: 50vh;
+}
+.pain-map-hint {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-top: 8px;
+}
+.pain-zones-summary {
+  text-align: center;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  margin-top: 8px;
+  min-height: 20px;
+}
+
+/* Joint zones — interactive (from v7) */
+.joint-zone {
+  fill: rgba(255, 255, 255, 0.15);
+  stroke: rgba(80, 80, 80, 0.55);
+  stroke-width: 4;
+  stroke-dasharray: 6 4;
+  cursor: pointer;
+  transition: all 0.15s;
+  pointer-events: all;
+}
+.joint-zone:hover {
+  fill: rgba(255, 100, 100, 0.45);
+  stroke: #b71c1c;
+  stroke-dasharray: none;
+  stroke-width: 5;
+}
+.joint-zone.joint-active {
+  fill: rgba(220, 30, 40, 0.75);
+  stroke: #7f0000;
+  stroke-dasharray: none;
+  stroke-width: 5;
+}
+
 /* ====== TEXT-TO-SPEECH BUTTON ====== */
 .btn-speak {
   display: flex;
