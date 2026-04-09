@@ -53,11 +53,12 @@ function showScreen(screenId) {
     document.querySelectorAll('.nav-btn')[0]?.classList.add('active');
   } else if (screenId.startsWith('screen-checkin') || screenId === 'screen-routine' || screenId === 'screen-exercise') {
     document.querySelectorAll('.nav-btn')[1]?.classList.add('active');
+    if (screenId === 'screen-checkin-pain') {
+      renderPainMap('pain-map-checkin');
+    }
   } else if (screenId === 'screen-progress') {
     document.querySelectorAll('.nav-btn')[2]?.classList.add('active');
     renderProgressScreen();
-  } else if (screenId === 'screen-checkin-pain') {
-    renderPainMap('pain-map-checkin');
   } else if (screenId === 'screen-tracking') {
     document.querySelectorAll('.nav-btn')[3]?.classList.add('active');
     renderTrackingScreen();

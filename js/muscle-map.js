@@ -1,43 +1,41 @@
 // muscle-map.js — SVG body map for muscle visualization and pain selection
 // Extracted from evihealth-mapa-dolor-v7.html by Blanca
 
-let bodyMapLoaded = false;
 let frontalSVG = '';
 let dorsalSVG = '';
+let loadPromise = null;
 const activeJoints = new Set();
 
-// Load the SVG from the body-map HTML file
-async function loadBodyMap() {
-  if (bodyMapLoaded) return;
-  try {
-    const response = await fetch('assets/body-map-v7.html');
-    const html = await response.text();
+// Load the SVG — returns a promise that resolves when ready
+function loadBodyMap() {
+  if (loadPromise) return loadPromise;
 
-    // Extract frontal SVG
-    const frontalMatch = html.match(/<svg[^>]*id="dz-svg-frontal"[^>]*>[\s\S]*?<\/svg>/);
-    if (frontalMatch) frontalSVG = frontalMatch[0];
+  loadPromise = fetch('assets/body-map-v7.html')
+    .then(r => r.text())
+    .then(html => {
+      const frontalMatch = html.match(/<svg[^>]*id="dz-svg-frontal"[^>]*>[\s\S]*?<\/svg>/);
+      if (frontalMatch) frontalSVG = frontalMatch[0];
 
-    // Extract dorsal SVG
-    const dorsalMatch = html.match(/<svg[^>]*id="dz-svg-dorsal"[^>]*>[\s\S]*?<\/svg>/);
-    if (dorsalMatch) dorsalSVG = dorsalMatch[0];
+      const dorsalMatch = html.match(/<svg[^>]*id="dz-svg-dorsal"[^>]*>[\s\S]*?<\/svg>/);
+      if (dorsalMatch) dorsalSVG = dorsalMatch[0];
 
-    bodyMapLoaded = true;
-  } catch (err) {
-    console.error('Error loading body map:', err);
-  }
+      console.log('Body map loaded. Frontal:', frontalSVG.length, 'Dorsal:', dorsalSVG.length);
+    })
+    .catch(err => {
+      console.error('Error loading body map:', err);
+      loadPromise = null; // Allow retry
+    });
+
+  return loadPromise;
 }
 
 // Render muscle map in exercise player (read-only, highlights muscles)
-export function renderExerciseMap(containerId, muscles) {
-  const container = document.getElementById(containerId);
-  if (!container || !frontalSVG) {
-    if (!bodyMapLoaded) {
-      loadBodyMap().then(() => renderExerciseMap(containerId, muscles));
-    }
-    return;
-  }
+export async function renderExerciseMap(containerId, muscles) {
+  await loadBodyMap();
 
-  // Create a compact version of the frontal SVG
+  const container = document.getElementById(containerId);
+  if (!container || !frontalSVG) return;
+
   let svg = frontalSVG
     .replace('id="dz-svg-frontal"', 'id="exercise-muscle-svg"')
     .replace('class="dz-silueta dz-visible"', 'class="muscle-map-svg"');
@@ -72,15 +70,12 @@ export function renderExerciseMap(containerId, muscles) {
   }
 }
 
-// Render pain map in check-in (interactive, clickable joints)
-export function renderPainMap(containerId) {
+// Render pain map in check-in (interactive, clickable joints) — frontal + dorsal
+export async function renderPainMap(containerId) {
+  await loadBodyMap();
+
   const container = document.getElementById(containerId);
-  if (!container || !frontalSVG) {
-    if (!bodyMapLoaded) {
-      loadBodyMap().then(() => renderPainMap(containerId));
-    }
-    return;
-  }
+  if (!container || !frontalSVG) return;
 
   let svgFront = frontalSVG
     .replace('id="dz-svg-frontal"', 'id="pain-map-frontal"')
@@ -89,7 +84,7 @@ export function renderPainMap(containerId) {
   let svgBack = dorsalSVG
     ? dorsalSVG
         .replace('id="dz-svg-dorsal"', 'id="pain-map-dorsal"')
-        .replace('class="dz-silueta"', 'class="pain-map-svg" style="display:none"')
+        .replace('class="dz-silueta"', 'class="pain-map-svg"')
     : '';
 
   container.innerHTML = `
@@ -99,10 +94,10 @@ export function renderPainMap(containerId) {
         <button class="pain-tab" data-view="dorsal">Espalda</button>
       </div>
       <div class="pain-map-wrap">
-        ${svgFront}
-        ${svgBack}
+        <div id="pain-view-frontal">${svgFront}</div>
+        <div id="pain-view-dorsal" style="display:none">${svgBack}</div>
       </div>
-      <p class="pain-map-hint">Toque las zonas donde siente dolor (se marcan en rojo)</p>
+      <p class="pain-map-hint">Toque las zonas ovaladas donde siente dolor (se marcan en rojo)</p>
       <div id="pain-zones-summary" class="pain-zones-summary"></div>
     </div>
   `;
@@ -113,10 +108,10 @@ export function renderPainMap(containerId) {
       container.querySelectorAll('.pain-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
       const view = tab.dataset.view;
-      const front = container.querySelector('#pain-map-frontal');
-      const back = container.querySelector('#pain-map-dorsal');
-      if (front) front.style.display = view === 'frontal' ? 'inline-block' : 'none';
-      if (back) back.style.display = view === 'dorsal' ? 'inline-block' : 'none';
+      const front = container.querySelector('#pain-view-frontal');
+      const back = container.querySelector('#pain-view-dorsal');
+      if (front) front.style.display = view === 'frontal' ? 'block' : 'none';
+      if (back) back.style.display = view === 'dorsal' ? 'block' : 'none';
     });
   });
 
@@ -126,7 +121,6 @@ export function renderPainMap(containerId) {
       const joint = zone.dataset.joint;
       if (activeJoints.has(joint)) {
         activeJoints.delete(joint);
-        // Remove from ALL matching zones (same joint appears in both views)
         container.querySelectorAll(`.joint-zone[data-joint="${joint}"]`).forEach(z => {
           z.classList.remove('joint-active');
         });
